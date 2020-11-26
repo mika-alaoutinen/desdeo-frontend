@@ -1,13 +1,13 @@
 import React from 'react'
 
-import HomeView from './views/HomeView'
+import Navigation from './components/navigation/Navigation'
 
 const App: React.FC = () => {
   
   return (
-    <div className="App">
+    <div className='App'>
       <h1>DESDEO frontend</h1>
-      <HomeView />
+      <Navigation />
     </div>
   )
 }
