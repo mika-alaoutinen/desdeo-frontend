@@ -2,9 +2,11 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 
-import input from './input/inputReducer'
+import desdeo from './desdeo/desdeoReducer'
+import input from './userInput/inputReducer'
 
 export const reducer = combineReducers({
+  desdeo,
   input
 })
 
