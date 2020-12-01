@@ -1,16 +1,23 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import Routes from '../../router/Routes'
+import { barchart, home } from '../../constants'
 
-// Add navigation bar and buttons below Routes
-const Navigation: React.FC = () => {
-  
-  return (
-    <div className='navigation'>
-      <Routes />
-    </div>
-  )
-}
+const Navigation: React.FC = () => (
+  <div className='navigation'>
+    <Routes />
+
+    <nav className='navigation-bar'>
+      <Link style={{ paddingRight: '0.5em' }} to={home}>
+        Home
+      </Link>
+
+      <Link style={{ paddingRight: '0.5em' }} to={barchart}>
+        Bar chart
+      </Link>
+    </nav>
+  </div>
+)
 
 export default Navigation
