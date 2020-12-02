@@ -1,9 +1,16 @@
 import {
-  ADD_PARAMETERS, ADD_VARIABLES, DesdeoAction, DesdeoState, RUN_ITERATION
+  ADD_PARAMETERS, ADD_VARIABLES, DesdeoAction, DesdeoState, RUN_ITERATION, Variable
 } from './desdeoTypes'
 
+// Example data
+const initVariables = (): Variable[] => [
+  { name: 'a', value: 15 },
+  { name: 'b', value: 20 },
+  { name: 'c', value: 25 },
+]
+
 const initialState: DesdeoState = {
-  variables: [],
+  variables: initVariables(),
   parameters: [],
   iteration: 0
 }
