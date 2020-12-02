@@ -1,8 +1,3 @@
-import { createSelectorHook } from 'react-redux'
-
-// Selector for the desdeo slice of store
-export const useSelector = createSelectorHook<DesdeoState, DesdeoAction>()
-
 // The shape of valid input data. These are placeholders.
 export interface Variable {
   name: string,
