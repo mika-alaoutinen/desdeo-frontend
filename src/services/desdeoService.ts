@@ -1,11 +1,14 @@
 import { Iteration, Parameter, Variable } from '../store/desdeo/desdeoTypes'
 
-// Placeholder functions
-const addVariables = async (input: Variable[]): Promise<Variable[]|void> =>
-  Promise.resolve(modifyInput(input))
+// Placeholder functions that simulate DESDEO's backend API
+const addVariable = async (variable: Variable): Promise<Variable|void> => {
+  const value = variable.value + 5
+  const name = `new-${value}`
+  return Promise.resolve({ name, value })
+}
 
-const addParameters = async (params: Parameter[]): Promise<Parameter[]|void> =>
-  Promise.resolve(params)
+const addParameter = async (param: Parameter): Promise<Parameter|void> =>
+  Promise.resolve(param)
 
 const getVariables = async (): Promise<Variable[]|void> =>
   Promise.resolve([
@@ -17,11 +20,4 @@ const getVariables = async (): Promise<Variable[]|void> =>
 const runIteration = async (iteration: Iteration): Promise<Iteration|void> =>
   Promise.resolve(iteration)
 
-// Temp function for returning mock data from 'backend'
-const modifyInput = (input: Variable[]): Variable[] =>
-  input.map(i => ({
-    ...i,
-    value: i.value++
-  }))
-
-export default { addVariables, addParameters, getVariables, runIteration }
+export default { addVariable, addParameters: addParameter, getVariables, runIteration }

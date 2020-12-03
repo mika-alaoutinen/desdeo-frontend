@@ -15,21 +15,37 @@ export interface Iteration {
 }
 
 // Action names
-export const ADD_VARIABLES = 'ADD_VARIABLES'
-export const ADD_PARAMETERS = 'ADD_PARAMETERS'
+export const ADD_VARIABLE = 'ADD_VARIABLE'
+export const ADD_PARAMETER = 'ADD_PARAMETER'
+export const UPDATE_VARIABLES = 'UPDATE_VARIABLES'
+export const UPDATE_PARAMETERS = 'UPDATE_PARAMETERS'
 export const RUN_ITERATION = 'RUN_ITERATION'
 
 // Types for state and actions:
 export type DesdeoState = Iteration
-export type DesdeoAction = AddVariables | AddParameters | RunIteration
+export type DesdeoAction =  | AddVariable
+                            | UpdateVariables
+                            | AddParameter
+                            | UpdateParameters
+                            | RunIteration
 
-interface AddVariables {
-  type: typeof ADD_VARIABLES,
+interface AddVariable {
+  type: typeof ADD_VARIABLE,
+  variable: Variable
+}
+
+interface UpdateVariables {
+  type: typeof UPDATE_VARIABLES,
   variables: Variable[]
 }
 
-interface AddParameters {
-  type: typeof ADD_PARAMETERS,
+interface AddParameter {
+  type: typeof ADD_PARAMETER,
+  parameter: Parameter
+}
+
+interface UpdateParameters {
+  type: typeof UPDATE_PARAMETERS,
   parameters: Parameter[]
 }
 

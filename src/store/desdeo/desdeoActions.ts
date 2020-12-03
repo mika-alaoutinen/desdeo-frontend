@@ -1,24 +1,24 @@
 import { AppThunk } from '../reduxTypes'
 
 import {
-  ADD_PARAMETERS, ADD_VARIABLES, RUN_ITERATION, Parameter, Variable
+  ADD_PARAMETER, ADD_VARIABLE, RUN_ITERATION, Parameter, Variable
 } from './desdeoTypes'
 
 import desdeo from '../../services/desdeoService'
 
-export const addVariables = (vars: Variable[]): AppThunk => async dispatch => {
-  const variables = await desdeo.addVariables(vars)
+export const addVariable = (newVar: Variable): AppThunk => async dispatch => {
+  const variable = await desdeo.addVariable(newVar)
   dispatch({
-    type: ADD_VARIABLES,
-    variables
+    type: ADD_VARIABLE,
+    variable
   })
 }
 
-export const addParameters = (params: Parameter[]): AppThunk => async dispatch => {
-  const parameters = await desdeo.addParameters(params)
+export const addParameter = (newParam: Parameter): AppThunk => async dispatch => {
+  const parameter = await desdeo.addParameters(newParam)
   dispatch({
-    type: ADD_PARAMETERS,
-    parameters
+    type: ADD_PARAMETER,
+    parameter
   })
 }
 
