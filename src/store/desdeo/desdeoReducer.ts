@@ -1,5 +1,6 @@
 import {
-  ADD_PARAMETER, ADD_VARIABLE, DesdeoAction, DesdeoState, RUN_ITERATION, Variable
+  ADD_PARAMETER, ADD_VARIABLE, REVERSE_VARIABLES, RUN_ITERATION,
+  DesdeoAction, DesdeoState, Variable
 } from './desdeoTypes'
 
 // Example data
@@ -34,6 +35,12 @@ const desdeo = (state: DesdeoState = initialState, action: DesdeoAction): Desdeo
       return {
         ...state,
         iteration: state.iteration + 1
+      }
+    
+    case REVERSE_VARIABLES:
+      return {
+        ...state,
+        variables: [...state.variables].reverse()
       }
 
     default:
