@@ -3,7 +3,8 @@ import React from 'react'
 import BarChart from 'desdeo-d3-barchart'
 import { useDispatch } from 'react-redux'
 import { useVariableValues, useMaxVariable } from '../hooks/barChartHooks'
-import { addVariable } from '../store/desdeo/desdeoActions'
+import { reverseVariables } from '../store/desdeo/desdeoActions'
+import { addVariable } from '../store/desdeo/desdeoThunkActions'
 
 const BarChartComponent: React.FC = () => {
   const dispatch = useDispatch()
@@ -14,13 +15,28 @@ const BarChartComponent: React.FC = () => {
   const addNewVariable = (): void => {
     dispatch(addVariable(maxVariable))
   }
+
+  const reverse = (): void => {
+    dispatch(reverseVariables())
+  }
   
-  return <BarChart props={{
-      data,
-      size,
-      doUpdate: addNewVariable
-    }}
-  />
+  return (
+    <div>
+      <BarChart props={{
+          data,
+          size,
+          doUpdate: addNewVariable
+        }}
+      />
+  
+      <BarChart props={{
+          data,
+          size,
+          doUpdate: reverse
+        }}
+      />
+    </div>
+  )
 }
 
 export default BarChartComponent
