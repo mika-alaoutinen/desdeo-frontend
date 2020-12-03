@@ -3,9 +3,8 @@ import { useDispatch } from 'react-redux'
 
 import BarChart from 'desdeo-d3-barchart'
 import { addVariable } from '../store/desdeo/desdeoActions'
-// import { createVariable } from '../components/barChart/dataTransformations'
+import { createVariable } from '../components/barChart/dataTransformations'
 import { useMaxVariable, useVariableValues } from '../hooks/barChartHooks'
-import { Variable } from '../store/desdeo/desdeoTypes'
 
 const BarChartView: React.FC = () => {
   const dispatch = useDispatch()
@@ -14,10 +13,7 @@ const BarChartView: React.FC = () => {
   const size = [500, 500]
 
   const addNewVariable = (): void => {
-    const newVariable: Variable = {
-      name: 'new1',
-      value: maxVariable.value + 5
-    }
+    const newVariable = createVariable(maxVariable)
     dispatch(addVariable(newVariable))
   }
 
