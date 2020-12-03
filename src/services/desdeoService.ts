@@ -1,8 +1,11 @@
 import { Iteration, Parameter, Variable } from '../store/desdeo/desdeoTypes'
 
 // Placeholder functions
-const addVariables = async (input: Variable[]): Promise<Variable[]|void> =>
-  Promise.resolve(modifyInput(input))
+const addVariable = async (variable: Variable): Promise<Variable|void> =>
+  Promise.resolve({
+    ...variable,
+    value: variable.value + 1
+  })
 
 const addParameters = async (params: Parameter[]): Promise<Parameter[]|void> =>
   Promise.resolve(params)
@@ -17,11 +20,4 @@ const getVariables = async (): Promise<Variable[]|void> =>
 const runIteration = async (iteration: Iteration): Promise<Iteration|void> =>
   Promise.resolve(iteration)
 
-// Temp function for returning mock data from 'backend'
-const modifyInput = (input: Variable[]): Variable[] =>
-  input.map(i => ({
-    ...i,
-    value: i.value++
-  }))
-
-export default { addVariables, addParameters, getVariables, runIteration }
+export default { addVariable, addParameters, getVariables, runIteration }
