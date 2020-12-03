@@ -16,9 +16,12 @@ export interface Iteration {
 
 // Action names
 export const ADD_VARIABLE = 'ADD_VARIABLE'
-export const ADD_PARAMETER = 'ADD_PARAMETER'
+export const REVERSE_VARIABLES = 'REVERSE_VARIABLES'
 export const UPDATE_VARIABLES = 'UPDATE_VARIABLES'
+
+export const ADD_PARAMETER = 'ADD_PARAMETER'
 export const UPDATE_PARAMETERS = 'UPDATE_PARAMETERS'
+
 export const RUN_ITERATION = 'RUN_ITERATION'
 
 // Types for state and actions:
@@ -28,10 +31,15 @@ export type DesdeoAction =  | AddVariable
                             | AddParameter
                             | UpdateParameters
                             | RunIteration
+                            | ReverseVariables
 
 interface AddVariable {
   type: typeof ADD_VARIABLE,
   variable: Variable
+}
+
+interface ReverseVariables {
+  type: typeof REVERSE_VARIABLES
 }
 
 interface UpdateVariables {
