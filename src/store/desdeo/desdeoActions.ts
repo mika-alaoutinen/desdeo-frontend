@@ -6,19 +6,19 @@ import {
 
 import desdeo from '../../services/desdeoService'
 
-export const addVariable = (variable: Variable): AppThunk => async dispatch => {
-  const response = await desdeo.addVariable(variable)
+export const addVariable = (newVar: Variable): AppThunk => async dispatch => {
+  const variable = await desdeo.addVariable(newVar)
   dispatch({
     type: ADD_VARIABLE,
-    variable: response
+    variable
   })
 }
 
-export const addParameters = (params: Parameter[]): AppThunk => async dispatch => {
-  const parameters = await desdeo.addParameters(params)
+export const addParameter = (newParam: Parameter): AppThunk => async dispatch => {
+  const parameter = await desdeo.addParameters(newParam)
   dispatch({
     type: ADD_PARAMETER,
-    parameters
+    parameter
   })
 }
 

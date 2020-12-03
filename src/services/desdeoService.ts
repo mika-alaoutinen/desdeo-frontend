@@ -1,14 +1,14 @@
 import { Iteration, Parameter, Variable } from '../store/desdeo/desdeoTypes'
 
-// Placeholder functions
-const addVariable = async (variable: Variable): Promise<Variable|void> =>
-  Promise.resolve({
-    ...variable,
-    value: variable.value + 1
-  })
+// Placeholder functions that simulate DESDEO's backend API
+const addVariable = async (variable: Variable): Promise<Variable|void> => {
+  const value = variable.value + 5
+  const name = `new-${value}`
+  return Promise.resolve({ name, value })
+}
 
-const addParameters = async (params: Parameter[]): Promise<Parameter[]|void> =>
-  Promise.resolve(params)
+const addParameter = async (param: Parameter): Promise<Parameter|void> =>
+  Promise.resolve(param)
 
 const getVariables = async (): Promise<Variable[]|void> =>
   Promise.resolve([
@@ -20,4 +20,4 @@ const getVariables = async (): Promise<Variable[]|void> =>
 const runIteration = async (iteration: Iteration): Promise<Iteration|void> =>
   Promise.resolve(iteration)
 
-export default { addVariable, addParameters, getVariables, runIteration }
+export default { addVariable, addParameters: addParameter, getVariables, runIteration }
