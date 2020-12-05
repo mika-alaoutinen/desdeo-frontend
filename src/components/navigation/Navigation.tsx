@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Drawer, List, ListItem, ListItemText } from '@material-ui/core'
+import { Divider, Drawer, List, ListItem, ListItemText } from '@material-ui/core'
 
 import Header from '../common/Header'
 import { navigation, NavLink } from './navigationConstants'
 
 const Navigation: React.FC = () => {
-
+  
   const createListItem = (link: NavLink): JSX.Element => (
     <ListItem
       key={link.text}
@@ -22,11 +22,13 @@ const Navigation: React.FC = () => {
     <Drawer
       anchor='left'
       className='NavigationDrawer'
+      style={{  margin: '5em' }}
       variant='permanent'
     >
       <Header />
+      <Divider />
 
-      <List>
+      <List style={{ marginRight: '5em' }}>
         {navigation.map(nav => createListItem(nav))}
       </List>
 
