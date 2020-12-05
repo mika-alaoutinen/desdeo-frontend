@@ -1,5 +1,5 @@
 import React from 'react'
-import { githubLink } from '../constants'
+import { githubLink } from '../misc/constants'
 
 const AboutView: React.FC = () => (
   <div className='About'>

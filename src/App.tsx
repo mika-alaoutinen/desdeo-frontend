@@ -1,17 +1,17 @@
 import React from 'react'
+import { Container } from '@material-ui/core'
 
-import Header from './components/common/Header'
-import Navigation from './components/common/Navigation'
+import Navigation from './components/navigation/Navigation'
 import Routes from './router/Routes'
+import { style } from './misc/layout'
 
 const App: React.FC = () => {
   
   return (
-    <div className='App'>
-      <Header />
+    <Container className='App' style={style}>
       <Navigation />
       <Routes />
-    </div>
+    </Container>
   )
 }
 
