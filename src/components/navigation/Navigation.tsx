@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Drawer, List, ListItem, ListItemText } from '@material-ui/core'
 
+import Header from '../common/Header'
 import { navigation, NavLink } from './navigationConstants'
 
 const Navigation: React.FC = () => {
@@ -20,11 +21,15 @@ const Navigation: React.FC = () => {
   return (
     <Drawer
       anchor='left'
+      className='NavigationDrawer'
       variant='permanent'
     >
+      <Header />
+
       <List>
         {navigation.map(nav => createListItem(nav))}
       </List>
+
     </Drawer>
   )
 }
