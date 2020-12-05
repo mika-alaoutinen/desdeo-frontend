@@ -26,12 +26,13 @@ export const RUN_ITERATION = 'RUN_ITERATION'
 
 // Types for state and actions:
 export type DesdeoState = Iteration
-export type DesdeoAction =  | AddVariable
-                            | UpdateVariables
-                            | AddParameter
-                            | UpdateParameters
-                            | RunIteration
-                            | ReverseVariables
+export type DesdeoAction =
+  | AddVariable
+  | UpdateVariables
+  | AddParameter
+  | UpdateParameters
+  | RunIteration
+  | ReverseVariables
 
 interface AddVariable {
   type: typeof ADD_VARIABLE,

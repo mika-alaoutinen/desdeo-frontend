@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import AboutView from '../views/AboutView'
 import BarChartView from '../views/BarChartView'
 import HomeView from '../views/HomeView'
-import { about, barchart, home } from '../constants'
+import { about, barchart, home } from '../components/common/navigationTypes'
 
 const Routes: React.FC = () => (
   <Switch>
