@@ -1,8 +1,8 @@
 import React from 'react'
-import BarChartComponent from '../components/BarChartComponent'
+import BarChartComponent from '../components/viz/BarChartComponent'
 
 const BarChartView: React.FC = () => (
-  <div>
+  <div className='BarChart'>
     <h2>Bar chart page</h2>
     <BarChartComponent />
   </div>
