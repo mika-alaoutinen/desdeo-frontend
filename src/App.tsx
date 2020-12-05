@@ -1,13 +1,16 @@
 import React from 'react'
 
-import Navigation from './components/navigation/Navigation'
+import Header from './components/common/Header'
+import Navigation from './components/common/Navigation'
+import Routes from './router/Routes'
 
 const App: React.FC = () => {
   
   return (
     <div className='App'>
-      <h1>DESDEO frontend</h1>
+      <Header />
       <Navigation />
+      <Routes />
     </div>
   )
 }
