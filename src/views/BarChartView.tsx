@@ -1,5 +1,5 @@
 import React from 'react'
-import BarChartComponent from '../components/BarChartComponent'
+import BarChartComponent from '../components/viz/BarChartComponent'
 
 const BarChartView: React.FC = () => (
   <div>
