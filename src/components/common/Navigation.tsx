@@ -2,28 +2,18 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Drawer, List, ListItem, ListItemText } from '@material-ui/core'
 
-import { about, barchart, home } from '../../constants'
+import { navigation, NavLink } from './navigationTypes'
 
 const Navigation: React.FC = () => {
 
-  const createListItems = (): JSX.Element[] => {
-    const links = [
-      { text: 'Home', to: home },
-      { text: 'About', to: about },
-      { text: 'Bar chart', to: barchart },
-    ]
-
-    return links.map(link => createListItem(link.text, link.to))
-  }
-
-  const createListItem = (text: string, to: string): JSX.Element => (
+  const createListItem = (link: NavLink): JSX.Element => (
     <ListItem
-      key={text}
+      key={link.text}
       button
       component={Link}
-      to={to}
+      to={link.to}
     >
-      <ListItemText primary={text} />
+      <ListItemText primary={link.text} />
     </ListItem>
   )
   
@@ -33,7 +23,7 @@ const Navigation: React.FC = () => {
       variant='permanent'
     >
       <List>
-        {createListItems()}
+        {navigation.map(nav => createListItem(nav))}
       </List>
     </Drawer>
   )
