@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid'
 
 import Navigation from './components/navigation/Navigation'
 import Routes from './router/Routes'
-import { style } from './layout'
+import { style } from './misc/layout'
 
 const App: React.FC = () => {
   
