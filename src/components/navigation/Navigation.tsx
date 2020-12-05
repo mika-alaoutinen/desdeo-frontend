@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Drawer, List, ListItem, ListItemText } from '@material-ui/core'
 
-import { navigation, NavLink } from './navigationTypes'
+import { navigation, NavLink } from './navigationConstants'
 
 const Navigation: React.FC = () => {
 
