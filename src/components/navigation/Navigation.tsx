@@ -7,14 +7,14 @@ import { navigation, NavLink } from './navigationConstants'
 
 const Navigation: React.FC = () => {
   
-  const createListItem = (link: NavLink): JSX.Element => (
+  const createListItem = ({ text, to }: NavLink): JSX.Element => (
     <ListItem
-      key={link.text}
+      key={text}
       button
       component={Link}
-      to={link.to}
+      to={to}
     >
-      <ListItemText primary={link.text} />
+      <ListItemText primary={text} />
     </ListItem>
   )
   
