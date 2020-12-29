@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { BarChartComponent } from 'desdeo-components'
-import { testdata } from '../../store/testdata'
+import { testdata } from '../../misc/testdata'
 
 const BarChart: React.FC = () => {
   const [ data, setData ] = useState(testdata)
