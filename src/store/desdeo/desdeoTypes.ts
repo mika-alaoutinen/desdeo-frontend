@@ -24,7 +24,7 @@ export const UPDATE_PARAMETERS = 'UPDATE_PARAMETERS'
 
 export const RUN_ITERATION = 'RUN_ITERATION'
 
-// Types for state and actions:
+// Types for state and actions
 export type DesdeoState = Iteration
 export type DesdeoAction =
   | AddVariable
