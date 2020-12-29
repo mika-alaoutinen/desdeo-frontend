@@ -1,12 +1,11 @@
 import { Datum } from 'desdeo-components/build/types/dataTypes'
 
 import { ADD_DATA, SELECT_DATUM, DataAction } from './dataTypes'
-import { testdata } from '../../misc/testdata'
 
 // Adds test data into store for development purposes
-export const addData = (): DataAction => ({
+export const addData = (data: Datum[]): DataAction => ({
   type: ADD_DATA,
-  data: testdata
+  data
 })
 
 export const selectDatum = (datum: Datum): DataAction => ({
