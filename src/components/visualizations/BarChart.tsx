@@ -22,9 +22,9 @@ const BarChart: React.FC = () => {
   return (
     <BarChartComponent
       data={data}
-      eventHandler={{
+      onClick={{
         type: 'REDUX',
-        callback: onClick
+        fn: onClick
       }}
     />
   )
