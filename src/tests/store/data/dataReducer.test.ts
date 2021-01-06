@@ -1,8 +1,29 @@
 import { Datum } from 'desdeo-components/build/types/dataTypes'
-import {
-  clearSelected, selectData, selectDatum
-} from '../../../store/data/dataReducer'
+
 import { testdata } from '../../testdata'
+// import {
+
+// } from '../../../store/data/dataActions'
+
+import {
+  addData, clearSelected, selectData, selectDatum
+} from '../../../store/data/dataReducer'
+
+// describe('dataReducer calls correct functions with actions', () => {
+//   it('', () => {
+//     data([], )
+//   })
+// })
+
+describe('addData concatenates to existing data array', () => {
+  it('new data is concatenated to array', () => {
+    const data = createData()
+    const newDatum = [createNewDatum()]
+    const newData = addData(newDatum, data)
+    const expectedData = data.concat(newDatum)
+    expect(newData).toMatchObject(expectedData)
+  })
+})
 
 describe('clearSelected sets property isSelected to false', () => {
   it('isSelected is false for all data', () => {
@@ -24,7 +45,7 @@ describe('selectData sets property isSelected to true for all selected data', ()
 
   it('data is not changed if a datum with a new ID is somehow given as selected', () => {
     const data = createData()
-    const invalid = [createNonExistingDatum()]
+    const invalid = [createNewDatum()]
     const edited = selectData(invalid, data)
     expect(edited).toMatchObject(data)
   })
@@ -45,7 +66,7 @@ describe('selectDatum reverses isSelected property\'s value', () => {
 
   it('data is not changed if a datum with a new ID is somehow given as selected', () => {
     const data = createData()
-    const invalid = createNonExistingDatum()
+    const invalid = createNewDatum()
     const edited = selectDatum(invalid, data)
     expect(edited).toMatchObject(data)
   })
@@ -76,8 +97,8 @@ const createData = (isSelected?: boolean): Datum[] => [
   }
 ]
 
-const createNonExistingDatum = (): Datum => ({
-  id: '-1',
+const createNewDatum = (): Datum => ({
+  id: '10',
   x: 0,
   y: 0
 })

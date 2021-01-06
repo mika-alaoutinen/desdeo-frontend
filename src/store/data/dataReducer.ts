@@ -8,7 +8,7 @@ const data = (state: DataState = [], action: DataAction): DataState => {
   switch (action.type) {
 
     case ADD_DATA:
-      return state.concat(action.data)
+      return addData(action.data, state)
 
     case CLEAR_SELECTED:
       return clearSelected(state)
@@ -25,6 +25,9 @@ const data = (state: DataState = [], action: DataAction): DataState => {
 }
 
 // Export these for easier testing
+export const addData = (newData: Datum[], data: Datum[]): Datum[] =>
+  data.concat(newData)
+
 export const clearSelected = (data: Datum[]): Datum[] =>
   data.map(datum => setSelected(datum, false))
 
