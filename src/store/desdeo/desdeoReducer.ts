@@ -29,7 +29,7 @@ const desdeo = (state: DesdeoState = initialState, action: DesdeoAction): Desdeo
         ...state,
         iteration: state.iteration + 1
       }
-    
+
     case REVERSE_VARIABLES:
       return {
         ...state,

@@ -20,7 +20,7 @@ const Navigation: React.FC = () => {
         {text}
       </Button>
     )
-  
+
   return (
     <AppBar position='static'>
       <Toolbar>

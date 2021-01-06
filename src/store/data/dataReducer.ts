@@ -5,11 +5,11 @@ const data = (state: DataState = [], action: DataAction): DataState => {
 
     case ADD_DATA:
       return state.concat(action.data)
-    
+
     case SELECT_DATUM:
       return state.map(datum =>
         datum.id === action.datum.id ? action.datum : datum)
-  
+
     default:
       return state
   }

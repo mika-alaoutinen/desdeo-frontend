@@ -13,11 +13,11 @@ const style: React.CSSProperties = {
 
 const App: React.FC = () => {
   const dispatch = useDispatch()
-  
+
   useEffect(() => {
     dispatch(addData(testdata))
   }, [dispatch])
-  
+
   return (
     <Container className='App' style={style}>
       <Navigation />
