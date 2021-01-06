@@ -15,16 +15,12 @@ const BarChart: React.FC = () => {
     dispatch(addData(testdata))
   }, [dispatch])
   
-  const onClick = (selected: Datum): void => {
-    dispatch(selectDatum(selected))
-  }
-
   return (
     <BarChartComponent
       data={data}
-      eventHandler={{
+      onClick={{
         type: 'REDUX',
-        callback: onClick
+        fn: (selected: Datum) => dispatch(selectDatum(selected))
       }}
     />
   )
