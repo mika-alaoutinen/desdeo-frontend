@@ -1,12 +1,18 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { ScatterSelectionComponent } from 'desdeo-components'
+import { Datum } from 'desdeo-components/build/types/dataTypes'
 
-import { useReduxSelectHandler } from '../../hooks/onSelectDispatchers'
 import { useData } from '../../hooks/selectors'
+import { selectData } from '../../store/data/dataActions'
 
 const ScatterSelection: React.FC = () => {
   const data = useData()
-  const onSelect = useReduxSelectHandler()
+  const dispatch = useDispatch()
+
+  const onSelect = (selected: Datum[]): void => {
+    dispatch(selectData(selected))
+  }
 
   return (
     <ScatterSelectionComponent
