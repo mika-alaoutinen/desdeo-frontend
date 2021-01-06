@@ -3,6 +3,7 @@ import { Grid } from '@material-ui/core'
 
 import BarChart from '../components/visualizations/BarChart'
 import ScatterChart from '../components/visualizations/ScatterChart'
+import ScatterSelection from '../components/visualizations/ScatterSelection'
 
 const ChartsView: React.FC = () => {
 
@@ -28,10 +29,7 @@ const ChartsView: React.FC = () => {
       {createSubHeading('Selectable charts')}
       <Grid container justify='center'>
         <Grid item>
-          <BarChart />
-        </Grid>
-        <Grid item>
-          <ScatterChart />
+          <ScatterSelection />
         </Grid>
       </Grid>
     </div>

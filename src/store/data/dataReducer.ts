@@ -1,3 +1,4 @@
+import { Datum } from 'desdeo-components/build/types/dataTypes'
 import {
   ADD_DATA, SELECT_DATA, SELECT_DATUM, DataAction, DataState
 } from './dataTypes'
@@ -9,7 +10,7 @@ const data = (state: DataState = [], action: DataAction): DataState => {
       return state.concat(action.data)
 
     case SELECT_DATA:
-      return action.data
+      return editSelectedData(action.data, state)
 
     case SELECT_DATUM:
       return state.map(datum =>
@@ -18,6 +19,17 @@ const data = (state: DataState = [], action: DataAction): DataState => {
     default:
       return state
   }
+}
+
+const editSelectedData = (selected: Datum[], data: Datum[]): Datum[] => {
+  const selectedIDs = selected.map(datum => datum.id)
+  return data.map(datum => selectedIDs.includes(datum.id)
+    ? {
+      ...datum,
+      isSelected: true
+    }
+    : datum
+  )
 }
 
 export default data
