@@ -1,25 +1,28 @@
 import { Datum } from 'desdeo-components/build/types/dataTypes'
 
 import { testdata } from '../../testdata'
-// import {
-
-// } from '../../../store/data/dataActions'
-
 import {
-  addData, clearSelected, selectData, selectDatum
+  addData
+} from '../../../store/data/dataActions'
+
+import reducer, {
+  addDataReduce, clearSelectedReduce, selectDataReduce, selectDatumReduce
 } from '../../../store/data/dataReducer'
 
-// describe('dataReducer calls correct functions with actions', () => {
-//   it('', () => {
-//     data([], )
-//   })
-// })
+describe('dataReducer calls correct functions with actions', () => {
+  it('new data is added to state', () => {
+    const data = createData()
+    const action = addData(data)
+    const state = reducer([], action)
+    expect(state).toEqual(data)
+  })
+})
 
 describe('addData concatenates to existing data array', () => {
   it('new data is concatenated to array', () => {
     const data = createData()
     const newDatum = [createNewDatum()]
-    const newData = addData(newDatum, data)
+    const newData = addDataReduce(newDatum, data)
     const expectedData = data.concat(newDatum)
     expect(newData).toMatchObject(expectedData)
   })
@@ -28,7 +31,7 @@ describe('addData concatenates to existing data array', () => {
 describe('clearSelected sets property isSelected to false', () => {
   it('isSelected is false for all data', () => {
     expect(testdata[0].isSelected).toBe(true)
-    const unselected = clearSelected(testdata)
+    const unselected = clearSelectedReduce(testdata)
     unselected.forEach(datum =>
       expect(datum.isSelected).toBe(false))
   })
@@ -38,7 +41,7 @@ describe('selectData sets property isSelected to true for all selected data', ()
   it('isSelected is set to true', () => {
     const data = createData()
     const selected = data.slice(0, 1)
-    const edited = selectData(selected, data)
+    const edited = selectDataReduce(selected, data)
     expect(edited[0].isSelected).toBe(true)
     expect(edited[1].isSelected).toBe(false)
   })
@@ -46,7 +49,7 @@ describe('selectData sets property isSelected to true for all selected data', ()
   it('data is not changed if a datum with a new ID is somehow given as selected', () => {
     const data = createData()
     const invalid = [createNewDatum()]
-    const edited = selectData(invalid, data)
+    const edited = selectDataReduce(invalid, data)
     expect(edited).toMatchObject(data)
   })
 })
@@ -67,7 +70,7 @@ describe('selectDatum reverses isSelected property\'s value', () => {
   it('data is not changed if a datum with a new ID is somehow given as selected', () => {
     const data = createData()
     const invalid = createNewDatum()
-    const edited = selectDatum(invalid, data)
+    const edited = selectDatumReduce(invalid, data)
     expect(edited).toMatchObject(data)
   })
 })
@@ -75,7 +78,7 @@ describe('selectDatum reverses isSelected property\'s value', () => {
 // Testing functions
 const testSelectDatum = (isSelected?: boolean): void => {
   const data = createData(isSelected)
-  const edited = selectDatum(data[0], data)
+  const edited = selectDatumReduce(data[0], data)
   expect(edited[0].isSelected).toBe(!isSelected)
 }
 

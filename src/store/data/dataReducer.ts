@@ -8,16 +8,16 @@ const data = (state: DataState = [], action: DataAction): DataState => {
   switch (action.type) {
 
     case ADD_DATA:
-      return addData(action.data, state)
+      return addDataReduce(action.data, state)
 
     case CLEAR_SELECTED:
-      return clearSelected(state)
+      return clearSelectedReduce(state)
 
     case SELECT_DATA:
-      return selectData(action.data, state)
+      return selectDataReduce(action.data, state)
 
     case SELECT_DATUM:
-      return selectDatum(action.datum, state)
+      return selectDatumReduce(action.datum, state)
 
     default:
       return state
@@ -25,18 +25,18 @@ const data = (state: DataState = [], action: DataAction): DataState => {
 }
 
 // Export these for easier testing
-export const addData = (newData: Datum[], data: Datum[]): Datum[] =>
+export const addDataReduce = (newData: Datum[], data: Datum[]): Datum[] =>
   data.concat(newData)
 
-export const clearSelected = (data: Datum[]): Datum[] =>
+export const clearSelectedReduce = (data: Datum[]): Datum[] =>
   data.map(datum => setSelected(datum, false))
 
-export const selectData = (selected: Datum[], data: Datum[]): Datum[] => {
+export const selectDataReduce = (selected: Datum[], data: Datum[]): Datum[] => {
   const selectedIDs = selected.map(datum => datum.id)
   return data.map(datum => mapSelected(selectedIDs, datum))
 }
 
-export const selectDatum = (selected: Datum, data: Datum[]): Datum[] =>
+export const selectDatumReduce = (selected: Datum, data: Datum[]): Datum[] =>
   data.map(datum => datum.id === selected.id
     ? editSelected(selected)
     : datum)
