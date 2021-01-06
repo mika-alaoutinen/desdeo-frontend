@@ -1,38 +1,31 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Divider, Drawer, List, ListItem, ListItemText } from '@material-ui/core'
+import { AppBar, Button, Toolbar } from '@material-ui/core'
 
-import Header from '../common/Header'
-import { navigation, NavLink } from './navigationConstants'
+import NavigationHeader from './NavigationHeader'
+import { navigation } from './navigationConstants'
 
 const Navigation: React.FC = () => {
-  
-  const createListItem = ({ text, to }: NavLink): JSX.Element => (
-    <ListItem
-      key={text}
-      button
-      component={Link}
-      to={to}
-    >
-      <ListItemText primary={text} />
-    </ListItem>
-  )
+
+  const createNavButtons = (): JSX.Element[] =>
+    navigation.map(({ text, to }) =>
+      <Button
+        key={text}
+        color='inherit'
+        component={Link}
+        to={to}
+      >
+        {text}
+      </Button>
+    )
   
   return (
-    <Drawer
-      anchor='left'
-      className='NavigationDrawer'
-      style={{  margin: '5em' }}
-      variant='permanent'
-    >
-      <Header />
-      <Divider />
-
-      <List style={{ marginRight: '5em' }}>
-        {navigation.map(nav => createListItem(nav))}
-      </List>
-
-    </Drawer>
+    <AppBar position='static'>
+      <Toolbar>
+        <NavigationHeader />
+        {createNavButtons()}
+      </Toolbar>
+    </AppBar>
   )
 }
 
