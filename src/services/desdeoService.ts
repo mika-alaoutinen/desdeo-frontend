@@ -1,5 +1,5 @@
-import { testvariables } from '../misc/testdata'
 import { Iteration, Parameter, Variable } from '../store/desdeo/desdeoTypes'
+import { testvariables } from '../tests/testdata'
 
 // Placeholder functions that simulate DESDEO's backend API
 const addVariable = async (variable: Variable): Promise<Variable|void> => {
