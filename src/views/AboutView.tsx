@@ -1,5 +1,4 @@
 import React from 'react'
-import { githubLink } from '../misc/constants'
 
 const AboutView: React.FC = () => (
   <div className='About'>
@@ -8,7 +7,7 @@ const AboutView: React.FC = () => (
     <p>Add information about using DESDEO here.</p>
 
     Source code: <a
-      href={githubLink}
+      href={'https://github.com/mika-alaoutinen/desdeo-frontend'}
       rel='noopener noreferrer'
       target='_blank'
       >

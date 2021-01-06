@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { AppBar, Button, Toolbar } from '@material-ui/core'
 
 import NavigationHeader from './NavigationHeader'
-import { navigation } from './navigationConstants'
+import { navigation } from '../../router/constants'
 
 const Navigation: React.FC = () => {
 

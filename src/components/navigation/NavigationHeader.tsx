@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Typography } from '@material-ui/core'
 
-import { home } from './navigationConstants'
+import { home } from '../../router/constants'
 
 const style: React.CSSProperties = {
   color: 'inherit',
