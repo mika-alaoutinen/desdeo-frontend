@@ -9,7 +9,7 @@ export const addData = (data: Datum[]): DataAction => ({
   data
 })
 
-export const clearSelections = (): DataAction => ({
+export const clearSelected = (): DataAction => ({
   type: CLEAR_SELECTED
 })
 

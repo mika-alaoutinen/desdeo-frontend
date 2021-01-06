@@ -4,7 +4,7 @@ import { ScatterSelectionComponent } from 'desdeo-components'
 import { Datum } from 'desdeo-components/build/types/dataTypes'
 
 import { useData } from '../../hooks/selectors'
-import { clearSelections, selectData } from '../../store/data/dataActions'
+import { clearSelected, selectData } from '../../store/data/dataActions'
 
 const ScatterSelection: React.FC = () => {
   const data = useData()
@@ -15,7 +15,7 @@ const ScatterSelection: React.FC = () => {
   }
 
   const onSelectionCleared = (): void => {
-    dispatch(clearSelections())
+    dispatch(clearSelected())
   }
 
   return (

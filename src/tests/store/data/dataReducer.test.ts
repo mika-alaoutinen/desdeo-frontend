@@ -2,22 +2,47 @@ import { Datum } from 'desdeo-components/build/types/dataTypes'
 
 import { testdata } from '../../testdata'
 import {
-  addData
+  addData, clearSelected, selectData, selectDatum
 } from '../../../store/data/dataActions'
 
 import reducer, {
   addDataReduce, clearSelectedReduce, selectDataReduce, selectDatumReduce
 } from '../../../store/data/dataReducer'
 
-describe('dataReducer calls correct functions with actions', () => {
-  it('new data is added to state', () => {
+// Testing the reducer
+describe('dataReducer manages state correctly', () => {
+  it('addData concatenates to state', () => {
     const data = createData()
     const action = addData(data)
     const state = reducer([], action)
     expect(state).toEqual(data)
   })
+
+  it('clearSelected sets isSelected property to false for all data', () => {
+    const data = createData(true)
+    const action = clearSelected()
+    const state = reducer(data, action)
+    state.forEach(datum => expect(datum.isSelected).toBe(false))
+  })
+
+  it('selectData sets isSelected property to true', () => {
+    const data = createData(false)
+    const action = selectData(data.slice(0, 1))
+    const state = reducer(data, action)
+    expect(state[0].isSelected).toBe(true)
+    expect(state[1].isSelected).toBeFalsy()
+  })
+
+  it('selectDatum sets isSelected property true for a single datum', () => {
+    const data = createData(false)
+    const action = selectDatum(data[0])
+    const state = reducer(data, action)
+    expect(state[0].isSelected).toBe(true)
+    expect(state[1].isSelected).toBeFalsy()
+  })
 })
 
+// Testing the reducer's helper functions
 describe('addData concatenates to existing data array', () => {
   it('new data is concatenated to array', () => {
     const data = createData()
@@ -28,12 +53,11 @@ describe('addData concatenates to existing data array', () => {
   })
 })
 
-describe('clearSelected sets property isSelected to false', () => {
+describe('clearSelected sets property isSelected to false for all data', () => {
   it('isSelected is false for all data', () => {
     expect(testdata[0].isSelected).toBe(true)
     const unselected = clearSelectedReduce(testdata)
-    unselected.forEach(datum =>
-      expect(datum.isSelected).toBe(false))
+    unselected.forEach(datum => expect(datum.isSelected).toBe(false))
   })
 })
 
