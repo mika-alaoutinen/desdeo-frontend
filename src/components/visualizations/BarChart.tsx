@@ -4,8 +4,8 @@ import { BarChartComponent } from 'desdeo-components'
 import { Datum } from 'desdeo-components/build/types/dataTypes'
 
 import { useData } from '../../hooks/barChartHooks'
-import { testdata } from '../../misc/testdata'
 import { addData, selectDatum } from '../../store/data/dataActions'
+import { testdata } from '../../tests/testdata'
 
 const BarChart: React.FC = () => {
   const data = useData()
