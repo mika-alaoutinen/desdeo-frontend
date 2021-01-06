@@ -1,27 +1,17 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import React from 'react'
 import { BarChartComponent } from 'desdeo-components'
-import { Datum } from 'desdeo-components/build/types/dataTypes'
 
-import { useData } from '../../hooks/barChartHooks'
-import { addData, selectDatum } from '../../store/data/dataActions'
-import { testdata } from '../../tests/testdata'
+import { useReduxClickHandler } from '../../hooks/onClickDispatchers'
+import { useData } from '../../hooks/selectors'
 
 const BarChart: React.FC = () => {
   const data = useData()
-  const dispatch = useDispatch()
+  const onClick = useReduxClickHandler()
 
-  useEffect(() => {
-    dispatch(addData(testdata))
-  }, [dispatch])
-  
   return (
     <BarChartComponent
       data={data}
-      onClick={{
-        type: 'REDUX',
-        fn: (selected: Datum) => dispatch(selectDatum(selected))
-      }}
+      onClick={onClick}
     />
   )
 }
