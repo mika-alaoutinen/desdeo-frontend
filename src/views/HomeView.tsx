@@ -1,7 +1,7 @@
 import React from 'react'
 
 const HomeView: React.FC = () => (
-  <div className='Home'>
+  <div className='HomeView'>
     <h2>Home page</h2>
 
     <p>

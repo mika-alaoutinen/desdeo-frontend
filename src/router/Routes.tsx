@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import AboutView from '../views/AboutView'
-import BarChartView from '../views/BarChartView'
+import ChartsView from '../views/ChartsView'
 import HomeView from '../views/HomeView'
 
 interface Link {
@@ -20,15 +20,15 @@ export const about: Link = {
   to: '/about'
 }
 
-export const barchart: Link = {
-  text: 'Bar chart',
-  to: '/barchart'
+export const charts: Link = {
+  text: 'Charts',
+  to: '/charts'
 }
 
 const Routes: React.FC = () => (
   <Switch>
     <Route exact path={about.to} component={AboutView} />
-    <Route exact path={barchart.to} component={BarChartView} />
+    <Route exact path={charts.to} component={ChartsView} />
     <Route exact path={home.to} component={HomeView} />
   </Switch>
   )

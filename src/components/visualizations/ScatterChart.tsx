@@ -1,19 +1,19 @@
 import React from 'react'
-import { BarChartComponent } from 'desdeo-components'
+import { ScatterChartComponent } from 'desdeo-components'
 
 import { useReduxClickHandler } from '../../hooks/onClickDispatchers'
 import { useData } from '../../hooks/selectors'
 
-const BarChart: React.FC = () => {
+const ScatterChart: React.FC = () => {
   const data = useData()
   const onClick = useReduxClickHandler()
 
   return (
-    <BarChartComponent
+    <ScatterChartComponent
       data={data}
       onClick={onClick}
     />
   )
 }
 
-export default BarChart
+export default ScatterChart
