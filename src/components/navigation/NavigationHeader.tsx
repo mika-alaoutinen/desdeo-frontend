@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Typography } from '@material-ui/core'
 
-import { home } from '../../router/constants'
+import { home } from '../../router/Routes'
 
 const style: React.CSSProperties = {
   color: 'inherit',
@@ -14,7 +14,7 @@ const NavigationHeader: React.FC = () => (
   <Typography
     component={Link}
     style={style}
-    to={home}
+    to={home.to}
     variant='h4'
   >
     DESDEO
