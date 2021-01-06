@@ -4,7 +4,6 @@ import {
   ADD_DATA, CLEAR_SELECTED, SELECT_DATA, SELECT_DATUM, DataAction
 } from './dataTypes'
 
-// Adds test data into store for development purposes
 export const addData = (data: Datum[]): DataAction => ({
   type: ADD_DATA,
   data
