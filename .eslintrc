@@ -16,7 +16,7 @@
     },
 
     "rules": {
-      "@typescript-eslint/explicit-function-return-type": 0,
+      "@typescript-eslint/explicit-function-return-type": 1,
       "@typescript-eslint/member-delimiter-style": [ 1, {
         "multiline": {
           "delimiter": "comma",
