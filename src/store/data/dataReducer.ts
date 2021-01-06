@@ -1,35 +1,60 @@
 import { Datum } from 'desdeo-components/build/types/dataTypes'
 import {
-  ADD_DATA, SELECT_DATA, SELECT_DATUM, DataAction, DataState
+  ADD_DATA, CLEAR_SELECTED, SELECT_DATA, SELECT_DATUM,
+  DataAction, DataState
 } from './dataTypes'
 
 const data = (state: DataState = [], action: DataAction): DataState => {
   switch (action.type) {
 
     case ADD_DATA:
-      return state.concat(action.data)
+      return addDataReduce(action.data, state)
+
+    case CLEAR_SELECTED:
+      return clearSelectedReduce(state)
 
     case SELECT_DATA:
-      return editSelectedData(action.data, state)
+      return selectDataReduce(action.data, state)
 
     case SELECT_DATUM:
-      return state.map(datum =>
-        datum.id === action.datum.id ? action.datum : datum)
+      return selectDatumReduce(action.datum, state)
 
     default:
       return state
   }
 }
 
-const editSelectedData = (selected: Datum[], data: Datum[]): Datum[] => {
+// Export these for easier testing
+export const addDataReduce = (newData: Datum[], data: Datum[]): Datum[] =>
+  data.concat(newData)
+
+export const clearSelectedReduce = (data: Datum[]): Datum[] =>
+  data.map(datum => setSelected(datum, false))
+
+export const selectDataReduce = (selected: Datum[], data: Datum[]): Datum[] => {
   const selectedIDs = selected.map(datum => datum.id)
-  return data.map(datum => selectedIDs.includes(datum.id)
-    ? {
-      ...datum,
-      isSelected: true
-    }
-    : datum
-  )
+  return data.map(datum => mapSelected(selectedIDs, datum))
 }
+
+export const selectDatumReduce = (selected: Datum, data: Datum[]): Datum[] =>
+  data.map(datum => datum.id === selected.id
+    ? editSelected(selected)
+    : datum)
+
+// Utility functions
+const editSelected = (datum: Datum): Datum =>
+  datum.isSelected === undefined
+    ? setSelected(datum, true)
+    : setSelected(datum, !datum.isSelected)
+
+const mapSelected = (selectedIDs: string[], datum: Datum): Datum =>
+  selectedIDs.includes(datum.id)
+    ? setSelected(datum, true)
+    : datum
+
+const setSelected = (datum: Datum, isSelected: boolean): Datum => ({
+  ...datum,
+  isSelected
+})
 
 export default data
