@@ -4,7 +4,7 @@ import { ScatterChartComponent } from 'desdeo-components'
 import { useReduxClickHandler } from '../../hooks/onClickDispatchers'
 import { useData } from '../../hooks/selectors'
 
-const ScatterSelection: React.FC = () => {
+const ScatterChart: React.FC = () => {
   const data = useData()
   const onClick = useReduxClickHandler()
 
@@ -16,4 +16,4 @@ const ScatterSelection: React.FC = () => {
   )
 }
 
-export default ScatterSelection
+export default ScatterChart

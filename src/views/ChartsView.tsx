@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 
 import BarChart from '../components/visualizations/BarChart'
-import ScatterSelection from '../components/visualizations/ScatterSelection'
+import ScatterChart from '../components/visualizations/ScatterChart'
 
 const ChartsView: React.FC = () => {
 
@@ -21,7 +21,7 @@ const ChartsView: React.FC = () => {
           <BarChart />
         </Grid>
         <Grid item>
-          <ScatterSelection />
+          <ScatterChart />
         </Grid>
       </Grid>
 
@@ -31,7 +31,7 @@ const ChartsView: React.FC = () => {
           <BarChart />
         </Grid>
         <Grid item>
-          <ScatterSelection />
+          <ScatterChart />
         </Grid>
       </Grid>
     </div>
