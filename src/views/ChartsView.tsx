@@ -4,6 +4,7 @@ import { Grid } from '@material-ui/core'
 import BarChart from '../components/visualizations/BarChart'
 import ScatterChart from '../components/visualizations/ScatterChart'
 import ScatterSelection from '../components/visualizations/ScatterSelection'
+import Table from '../components/visualizations/Table'
 
 const ChartsView: React.FC = () => {
 
@@ -31,6 +32,11 @@ const ChartsView: React.FC = () => {
         <Grid item>
           <ScatterSelection />
         </Grid>
+      </Grid>
+
+      {createSubHeading('Basic table')}
+      <Grid container justify='center'>
+        <Table />
       </Grid>
     </div>
   )
