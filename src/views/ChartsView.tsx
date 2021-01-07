@@ -13,31 +13,27 @@ const ChartsView: React.FC = () => {
       {text}
     </h3>
 
+  const createGrid = (...components: JSX.Element[]): JSX.Element =>
+    <Grid container justify='center'>
+      {components.map(wrapComponentInGrid)}
+    </Grid>
+
+  const wrapComponentInGrid = (component: JSX.Element): JSX.Element =>
+    <Grid item>{component}</Grid>
+
   return (
     <div className='ChartsView'>
       <h2>Charts page</h2>
 
       {createSubHeading('Clickable charts')}
-      <Grid container justify='center'>
-        <Grid item>
-          <BarChart />
-        </Grid>
-        <Grid item>
-          <ScatterChart />
-        </Grid>
-      </Grid>
+      {createGrid(<BarChart />, <ScatterChart />)}
 
       {createSubHeading('Selectable charts')}
-      <Grid container justify='center'>
-        <Grid item>
-          <ScatterSelection />
-        </Grid>
-      </Grid>
+      {createGrid(<ScatterSelection />)}
 
       {createSubHeading('Basic table')}
-      <Grid container justify='center'>
-        <Table />
-      </Grid>
+      {createGrid(<Table />)}
+
     </div>
   )
 }
