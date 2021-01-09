@@ -1,9 +1,7 @@
-import { Datum } from 'desdeo-components/build/types/dataTypes'
-
-import { testdata } from '../../testdata'
 import {
   addData, clearSelected, selectData, selectDatum
 } from '../../../store/data/dataActions'
+import { createData, createNewDatum } from '../../testUtils'
 
 import reducer, {
   addDataReduce, clearSelectedReduce, selectDataReduce, selectDatumReduce
@@ -55,8 +53,8 @@ describe('addData concatenates to existing data array', () => {
 
 describe('clearSelected sets property isSelected to false for all data', () => {
   it('isSelected is false for all data', () => {
-    expect(testdata[0].isSelected).toBe(true)
-    const unselected = clearSelectedReduce(testdata)
+    const data = createData(true)
+    const unselected = clearSelectedReduce(data)
     unselected.forEach(datum => expect(datum.isSelected).toBe(false))
   })
 })
@@ -105,27 +103,3 @@ const testSelectDatum = (isSelected?: boolean): void => {
   const edited = selectDatumReduce(data[0], data)
   expect(edited[0].isSelected).toBe(!isSelected)
 }
-
-// Utility functions
-const createData = (isSelected?: boolean): Datum[] => [
-  {
-    id: '1',
-    label: 'A',
-    isSelected,
-    x: 1,
-    y: 1
-  },
-  {
-    id: '2',
-    label: 'B',
-    isSelected: false,
-    x: 2,
-    y: 2
-  }
-]
-
-const createNewDatum = (): Datum => ({
-  id: '10',
-  x: 0,
-  y: 0
-})

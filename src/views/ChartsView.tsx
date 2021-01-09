@@ -4,6 +4,7 @@ import { Grid } from '@material-ui/core'
 import BarChart from '../components/visualizations/BarChart'
 import ScatterChart from '../components/visualizations/ScatterChart'
 import ScatterSelection from '../components/visualizations/ScatterSelection'
+import Table from '../components/visualizations/Table'
 
 const ChartsView: React.FC = () => {
 
@@ -12,26 +13,33 @@ const ChartsView: React.FC = () => {
       {text}
     </h3>
 
+  const createGrid = (...components: JSX.Element[]): JSX.Element =>
+    <Grid
+      className='chart-grid'
+      container
+      justify='center'
+    >
+      {components.map((component, index) => wrapComponentInGrid(component, index))}
+    </Grid>
+
+  const wrapComponentInGrid = (component: JSX.Element, key: number): JSX.Element =>
+    <Grid key={key} item>
+      {component}
+    </Grid>
+
   return (
     <div className='ChartsView'>
       <h2>Charts page</h2>
 
       {createSubHeading('Clickable charts')}
-      <Grid container justify='center'>
-        <Grid item>
-          <BarChart />
-        </Grid>
-        <Grid item>
-          <ScatterChart />
-        </Grid>
-      </Grid>
+      {createGrid(<BarChart />, <ScatterChart />)}
 
       {createSubHeading('Selectable charts')}
-      <Grid container justify='center'>
-        <Grid item>
-          <ScatterSelection />
-        </Grid>
-      </Grid>
+      {createGrid(<ScatterSelection />)}
+
+      {createSubHeading('Basic table')}
+      {createGrid(<Table />)}
+
     </div>
   )
 }
