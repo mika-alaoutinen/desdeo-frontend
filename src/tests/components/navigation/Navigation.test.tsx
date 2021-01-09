@@ -1,16 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { render, screen } from '@testing-library/react'
+import { render, RenderResult, screen } from '@testing-library/react'
 
 import Navigation from '../../../components/navigation/Navigation'
-
-beforeEach(() => {
-  render(
-    <Router>
-      <Navigation />
-    </Router>
-  )
-})
 
 describe('Navigation component is rendered', () => {
   it('component is truthy', () => {
@@ -18,31 +10,42 @@ describe('Navigation component is rendered', () => {
   })
 })
 
-describe('Navigation buttons are created', () => {
+describe('Navigation elements are displayed and have links', () => {
   it('About and Charts buttons are displayed', () => {
+    renderWithRouter()
     const buttonTexts = [ 'About', 'Charts' ]
     buttonTexts
       .map(text => screen.getByText(text))
       .forEach(htmlElement => expect(htmlElement).toBeTruthy())
   })
 
-  it('buttons have links', () => {
-    const { container } = render(
-      <Router>
-        <Navigation />
-      </Router>
-    )
-
+  it('About and Charts buttons have links', () => {
+    const { container } = renderWithRouter()
     const expectedLinks = [ '/about', '/charts' ]
+
     Array.from(container.querySelectorAll('nav > a'))
       .map(link => link.getAttribute('href'))
       .forEach(href => expect(expectedLinks).toContain(href))
   })
-})
 
-describe('DESDEO heading text is displayed', () => {
-  it('heading is displayed', () => {
+  it('DESDEO heading text is displayed', () => {
+    renderWithRouter()
     const heading = screen.getByText('DESDEO')
     expect(heading).toBeTruthy()
   })
+
+  it('DESDEO heading has a home link', () => {
+    const { container } = renderWithRouter()
+    const headingHref = container
+      .querySelector('.desdeo-heading')
+      ?.getAttribute('href')
+    expect(headingHref).toEqual('/')
+  })
 })
+
+const renderWithRouter = (): RenderResult =>
+  render(
+    <Router>
+      <Navigation />
+    </Router>
+  )

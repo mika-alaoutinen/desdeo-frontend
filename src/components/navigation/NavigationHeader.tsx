@@ -12,6 +12,7 @@ const style: React.CSSProperties = {
 
 const NavigationHeader: React.FC = () => (
   <Typography
+    className='desdeo-heading'
     component={Link}
     style={style}
     to={home.to}
