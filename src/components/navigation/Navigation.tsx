@@ -25,7 +25,9 @@ const Navigation: React.FC = () => {
     <AppBar position='static'>
       <Toolbar>
         <NavigationHeader />
-        {createNavButtons()}
+        <nav>
+          {createNavButtons()}
+        </nav>
       </Toolbar>
     </AppBar>
   )

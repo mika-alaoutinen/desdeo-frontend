@@ -1,6 +1,6 @@
 import App from '../App'
 
-describe('BarChart component', () => {
+describe('App component is rendered', () => {
   it('is truthy', () => {
     expect(App).toBeTruthy()
   })
