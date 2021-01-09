@@ -33,13 +33,13 @@
     "redux-devtools-extension": "^2.13.8"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext ts,tsx . --fix",
+    "start": "react-scripts start",
     "test": "npm run test:unit",
     "test:coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
-    "test:unit": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint --ext ts,tsx . --fix"
+    "test:unit": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
