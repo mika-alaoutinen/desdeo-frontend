@@ -16,3 +16,9 @@ export const createData = (isSelected?: boolean): Datum[] => [
     y: 2
   }
 ]
+
+export const createNewDatum = (): Datum => ({
+  id: '10',
+  x: 0,
+  y: 0
+})

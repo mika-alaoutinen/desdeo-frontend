@@ -1,9 +1,7 @@
-import { Datum } from 'desdeo-components/build/types/dataTypes'
-
 import {
   addData, clearSelected, selectData, selectDatum
 } from '../../../store/data/dataActions'
-import { createData } from '../../testUtils'
+import { createData, createNewDatum } from '../../testUtils'
 
 import reducer, {
   addDataReduce, clearSelectedReduce, selectDataReduce, selectDatumReduce
@@ -105,10 +103,3 @@ const testSelectDatum = (isSelected?: boolean): void => {
   const edited = selectDatumReduce(data[0], data)
   expect(edited[0].isSelected).toBe(!isSelected)
 }
-
-// Utility functions
-const createNewDatum = (): Datum => ({
-  id: '10',
-  x: 0,
-  y: 0
-})
