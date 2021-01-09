@@ -1,6 +1,5 @@
 import { Datum } from 'desdeo-components/build/types/dataTypes'
 
-import { testdata } from '../../testdata'
 import {
   addData, clearSelected, selectData, selectDatum
 } from '../../../store/data/dataActions'
@@ -55,8 +54,8 @@ describe('addData concatenates to existing data array', () => {
 
 describe('clearSelected sets property isSelected to false for all data', () => {
   it('isSelected is false for all data', () => {
-    expect(testdata[0].isSelected).toBe(true)
-    const unselected = clearSelectedReduce(testdata)
+    const data = createData(true)
+    const unselected = clearSelectedReduce(data)
     unselected.forEach(datum => expect(datum.isSelected).toBe(false))
   })
 })
