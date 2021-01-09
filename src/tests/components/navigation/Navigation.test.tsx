@@ -4,17 +4,18 @@ import { render, RenderResult, screen } from '@testing-library/react'
 
 import Navigation from '../../../components/navigation/Navigation'
 
+let container: Element
+beforeEach(() => {
+  container = renderWithRouter().container
+})
+
 describe('Navigation component is rendered', () => {
   it('component is truthy', () => {
-    expect(Navigation).toBeTruthy()
+    expect(renderWithRouter()).toBeTruthy()
   })
 })
 
 describe('Navigation elements are displayed', () => {
-  beforeEach(() => {
-    renderWithRouter()
-  })
-
   it('About and Charts buttons are displayed', () => {
     const buttonTexts = [ 'About', 'Charts' ]
     buttonTexts
@@ -29,11 +30,6 @@ describe('Navigation elements are displayed', () => {
 })
 
 describe('Navigation elements have links that point to correct hrefs', () => {
-  let container: Element
-  beforeEach(() => {
-    container = renderWithRouter().container
-  })
-
   it('About and Charts buttons have links', () => {
     const expectedLinks = [ '/about', '/charts' ]
     Array.from(container.querySelectorAll('nav > a'))
