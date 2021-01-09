@@ -10,32 +10,38 @@ describe('Navigation component is rendered', () => {
   })
 })
 
-describe('Navigation elements are displayed and have links', () => {
-  it('About and Charts buttons are displayed', () => {
+describe('Navigation elements are displayed', () => {
+  beforeEach(() => {
     renderWithRouter()
+  })
+
+  it('About and Charts buttons are displayed', () => {
     const buttonTexts = [ 'About', 'Charts' ]
     buttonTexts
       .map(text => screen.getByText(text))
       .forEach(htmlElement => expect(htmlElement).toBeTruthy())
   })
 
-  it('About and Charts buttons have links', () => {
-    const { container } = renderWithRouter()
-    const expectedLinks = [ '/about', '/charts' ]
+  it('DESDEO heading text is displayed', () => {
+    const heading = screen.getByText('DESDEO')
+    expect(heading).toBeTruthy()
+  })
+})
 
+describe('Navigation elements have links that point to correct hrefs', () => {
+  let container: Element
+  beforeEach(() => {
+    container = renderWithRouter().container
+  })
+
+  it('About and Charts buttons have links', () => {
+    const expectedLinks = [ '/about', '/charts' ]
     Array.from(container.querySelectorAll('nav > a'))
       .map(link => link.getAttribute('href'))
       .forEach(href => expect(expectedLinks).toContain(href))
   })
 
-  it('DESDEO heading text is displayed', () => {
-    renderWithRouter()
-    const heading = screen.getByText('DESDEO')
-    expect(heading).toBeTruthy()
-  })
-
   it('DESDEO heading has a home link', () => {
-    const { container } = renderWithRouter()
     const headingHref = container
       .querySelector('.desdeo-heading')
       ?.getAttribute('href')
