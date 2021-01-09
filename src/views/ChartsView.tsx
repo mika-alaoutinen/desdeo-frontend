@@ -14,12 +14,18 @@ const ChartsView: React.FC = () => {
     </h3>
 
   const createGrid = (...components: JSX.Element[]): JSX.Element =>
-    <Grid container justify='center'>
-      {components.map(wrapComponentInGrid)}
+    <Grid
+      className='chart-grid'
+      container
+      justify='center'
+    >
+      {components.map((component, index) => wrapComponentInGrid(component, index))}
     </Grid>
 
-  const wrapComponentInGrid = (component: JSX.Element): JSX.Element =>
-    <Grid item>{component}</Grid>
+  const wrapComponentInGrid = (component: JSX.Element, key: number): JSX.Element =>
+    <Grid key={key} item>
+      {component}
+    </Grid>
 
   return (
     <div className='ChartsView'>

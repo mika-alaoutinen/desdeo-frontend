@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react'
 import HomeView from '../../views/HomeView'
 
 beforeEach(() => {
-  render(<HomeView />).container
+  render(<HomeView />)
 })
 
 describe('HomeView component is rendered', () => {
