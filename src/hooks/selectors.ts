@@ -1,5 +1,5 @@
-import { Datum } from 'desdeo-components/build/types/dataTypes'
+import { Coordinate } from 'desdeo-components/build/types/dataTypes'
 import { useSelector } from '../store/reduxTypes'
 
-export const useData = (): Datum[] =>
+export const useData = (): Coordinate[] =>
   useSelector(state => state.data)

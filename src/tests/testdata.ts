@@ -1,8 +1,8 @@
-import { Datum } from 'desdeo-components/build/types/dataTypes'
+import { Coordinate } from 'desdeo-components/build/types/dataTypes'
 
 import { Variable } from '../store/desdeo/desdeoTypes'
 
-export const testdata: Datum[] = [
+export const testdata: Coordinate[] = [
   { id: 'a', x: 10, y: 20, label: 'A', isSelected: true },
   { id: 'b', x: 20, y: 40, label: 'B', isSelected: false },
   { id: 'c', x: 30, y: 70, label: 'C' },
