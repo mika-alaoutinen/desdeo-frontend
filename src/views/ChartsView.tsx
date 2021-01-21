@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 
 import BarChart from '../components/visualizations/bar/BarChart'
+import GroupedBarChart from '../components/visualizations/bar/GroupedBarChart'
 import ScatterChart from '../components/visualizations/scatter/ScatterChart'
 import ScatterSelection from '../components/visualizations/scatter/ScatterSelection'
 import Table from '../components/visualizations/table/Table'
@@ -32,7 +33,7 @@ const ChartsView: React.FC = () => {
       <h2>Charts page</h2>
 
       {createSubHeading('Bar charts')}
-      {createGrid(<BarChart />)}
+      {createGrid(<BarChart />, <GroupedBarChart />)}
 
       {createSubHeading('Scatter charts')}
       {createGrid(<ScatterChart />, <ScatterSelection />)}
