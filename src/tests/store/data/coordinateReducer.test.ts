@@ -8,7 +8,7 @@ import reducer, {
 } from '../../../store/coordinates/coordinateReducer'
 
 // Testing the reducer
-describe('dataReducer manages state correctly', () => {
+describe('coordinatesReducer manages state correctly', () => {
   it('addData concatenates to state', () => {
     const data = createData()
     const action = addData(data)
