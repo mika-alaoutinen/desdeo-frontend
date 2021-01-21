@@ -4,7 +4,7 @@ import { createData, createNewDatum } from '../../testUtils'
 
 import {
   addData, clearSelected, selectData, selectDatum
-} from '../../../store/data/dataActions'
+} from '../../../store/data/coordinateActions'
 
 
 describe('should create actions', () => {

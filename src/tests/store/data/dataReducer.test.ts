@@ -1,6 +1,6 @@
 import {
   addData, clearSelected, selectData, selectDatum
-} from '../../../store/data/dataActions'
+} from '../../../store/data/coordinateActions'
 import { createData, createNewDatum } from '../../testUtils'
 
 import reducer, {

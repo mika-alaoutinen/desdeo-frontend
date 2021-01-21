@@ -4,7 +4,7 @@ import { BarChartComponent } from 'desdeo-components'
 import { Coordinate } from 'desdeo-components/build/types/dataTypes'
 
 import { useData } from '../../../hooks/selectors'
-import { selectDatum } from '../../../store/data/dataActions'
+import { selectDatum } from '../../../store/data/coordinateActions'
 
 const BarChart: React.FC = () => {
   const data = useData()
