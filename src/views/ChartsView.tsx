@@ -8,7 +8,10 @@ import ScatterChart from '../components/visualizations/scatter/ScatterChart'
 import ScatterSelection from '../components/visualizations/scatter/ScatterSelection'
 import Table from '../components/visualizations/table/Table'
 
+import { useSelectedSet } from '../hooks/selectors'
+
 const ChartsView: React.FC = () => {
+  const { id, label, y } = useSelectedSet()
 
   const createSubHeading = (text: string): JSX.Element =>
     <h3 style={{ textAlign: 'center' }}>
@@ -32,6 +35,11 @@ const ChartsView: React.FC = () => {
   return (
     <div className='ChartsView'>
       <h2>Charts page</h2>
+
+      <p>Selected coordinate:</p>
+      <p>ID: {id}</p>
+      <p>Label: {label}</p>
+      <p>Y: {y}</p>
 
       {createSubHeading('Bar charts')}
       {createGrid(<BarChart />, <GroupedBarChart />, <StackedBarChart />)}
