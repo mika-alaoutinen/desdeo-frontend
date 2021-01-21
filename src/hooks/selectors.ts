@@ -5,6 +5,6 @@ const useCoordinates = (): Coordinate[] =>
   useSelector(state => state.coordinates)
 
 const useCoordinateSets = (): CoordinateSet[] =>
-  useSelector(state => state.coordinateSets)
+  useSelector(state => state.sets)
 
 export { useCoordinates, useCoordinateSets }
