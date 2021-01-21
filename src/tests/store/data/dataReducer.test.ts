@@ -5,7 +5,7 @@ import { createData, createNewDatum } from '../../testUtils'
 
 import reducer, {
   addDataReduce, clearSelectedReduce, selectDataReduce, selectDatumReduce
-} from '../../../store/data/dataReducer'
+} from '../../../store/data/coordinateReducer'
 
 // Testing the reducer
 describe('dataReducer manages state correctly', () => {

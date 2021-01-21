@@ -2,7 +2,7 @@ import { Coordinate } from 'desdeo-components/build/types/dataTypes'
 
 import {
   ADD_DATA, CLEAR_SELECTED, SELECT_DATA, SELECT_DATUM, DataAction
-} from './dataTypes'
+} from './coordinateTypes'
 
 export const addData = (data: Coordinate[]): DataAction => ({
   type: ADD_DATA,

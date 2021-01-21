@@ -2,7 +2,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 
-import data from './data/dataReducer'
+import data from './data/coordinateReducer'
 import desdeo from './desdeo/desdeoReducer'
 import input from './userInput/inputReducer'
 

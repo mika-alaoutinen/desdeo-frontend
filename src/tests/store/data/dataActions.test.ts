@@ -1,5 +1,5 @@
-import { DataAction } from '../../../store/data/dataTypes'
-import { ADD_DATA, CLEAR_SELECTED, SELECT_DATA, SELECT_DATUM } from '../../../store/data/dataTypes'
+import { DataAction } from '../../../store/data/coordinateTypes'
+import { ADD_DATA, CLEAR_SELECTED, SELECT_DATA, SELECT_DATUM } from '../../../store/data/coordinateTypes'
 import { createData, createNewDatum } from '../../testUtils'
 
 import {

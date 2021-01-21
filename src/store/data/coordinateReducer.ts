@@ -2,7 +2,7 @@ import { Coordinate } from 'desdeo-components/build/types/dataTypes'
 import {
   ADD_DATA, CLEAR_SELECTED, SELECT_DATA, SELECT_DATUM,
   DataAction, DataState
-} from './dataTypes'
+} from './coordinateTypes'
 
 const data = (state: DataState = [], action: DataAction): DataState => {
   switch (action.type) {
