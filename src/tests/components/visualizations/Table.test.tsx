@@ -1,4 +1,4 @@
-import Table from '../../../components/visualizations/Table'
+import Table from '../../../components/visualizations/table/Table'
 
 describe('Component is rendered', () => {
   it('component is truthy', () => {

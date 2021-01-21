@@ -7,7 +7,7 @@ import {
 import desdeo from '../../services/desdeoService'
 
 
-export const addVariable = (newVar: Variable): AppThunk =>
+const addVariable = (newVar: Variable): AppThunk =>
   async (dispatch): Promise<Action> => {
     const variable = await desdeo.addVariable(newVar)
     return dispatch({
@@ -16,7 +16,7 @@ export const addVariable = (newVar: Variable): AppThunk =>
     })
 }
 
-export const addParameter = (newParam: Parameter): AppThunk =>
+const addParameter = (newParam: Parameter): AppThunk =>
   async (dispatch): Promise<Action> => {
     const parameter = await desdeo.addParameters(newParam)
     return dispatch({
@@ -25,7 +25,7 @@ export const addParameter = (newParam: Parameter): AppThunk =>
     })
 }
 
-export const runIteration = (): AppThunk =>
+const runIteration = (): AppThunk =>
   async (dispatch, getState): Promise<Action> => {
     const currentIteration = getState().desdeo
     const iteration = await desdeo.runIteration(currentIteration)
@@ -34,3 +34,5 @@ export const runIteration = (): AppThunk =>
       iteration
     })
 }
+
+export { addVariable, addParameter, runIteration }

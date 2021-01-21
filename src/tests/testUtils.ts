@@ -1,6 +1,6 @@
-import { Datum } from 'desdeo-components/build/types/dataTypes'
+import { Coordinate } from 'desdeo-components/build/types/dataTypes'
 
-export const createData = (isSelected?: boolean): Datum[] => [
+export const createData = (isSelected?: boolean): Coordinate[] => [
   {
     id: '1',
     label: 'A',
@@ -17,7 +17,7 @@ export const createData = (isSelected?: boolean): Datum[] => [
   }
 ]
 
-export const createNewDatum = (): Datum => ({
+export const createNewDatum = (): Coordinate => ({
   id: '10',
   x: 0,
   y: 0

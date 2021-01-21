@@ -1,10 +1,12 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
 
-import BarChart from '../components/visualizations/BarChart'
-import ScatterChart from '../components/visualizations/ScatterChart'
-import ScatterSelection from '../components/visualizations/ScatterSelection'
-import Table from '../components/visualizations/Table'
+import BarChart from '../components/visualizations/bar/BarChart'
+import GroupedBarChart from '../components/visualizations/bar/GroupedBarChart'
+import StackedBarChart from '../components/visualizations/bar/StackedBarChart'
+import ScatterChart from '../components/visualizations/scatter/ScatterChart'
+import ScatterSelection from '../components/visualizations/scatter/ScatterSelection'
+import Table from '../components/visualizations/table/Table'
 
 const ChartsView: React.FC = () => {
 
@@ -31,15 +33,14 @@ const ChartsView: React.FC = () => {
     <div className='ChartsView'>
       <h2>Charts page</h2>
 
-      {createSubHeading('Clickable charts')}
-      {createGrid(<BarChart />, <ScatterChart />)}
+      {createSubHeading('Bar charts')}
+      {createGrid(<BarChart />, <GroupedBarChart />, <StackedBarChart />)}
 
-      {createSubHeading('Selectable charts')}
-      {createGrid(<ScatterSelection />)}
+      {createSubHeading('Scatter charts')}
+      {createGrid(<ScatterChart />, <ScatterSelection />)}
 
       {createSubHeading('Basic table')}
       {createGrid(<Table />)}
-
     </div>
   )
 }

@@ -2,12 +2,14 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 
-import data from './data/dataReducer'
+import coordinates from './coordinates/coordinateReducer'
+import sets from './sets/setReducer'
 import desdeo from './desdeo/desdeoReducer'
 import input from './userInput/inputReducer'
 
 export const reducer = combineReducers({
-  data,
+  coordinates,
+  sets,
   desdeo,
   input
 })

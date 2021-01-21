@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 
-import { GITHUB_URL } from '../../constants'
+import { GITHUB_URL_COMPONENTS, GITHUB_URL_FRONTEND } from '../../constants'
 
 import AboutView from '../../views/AboutView'
 
@@ -16,15 +16,21 @@ describe('AboutView component is rendered', () => {
   })
 })
 
-describe('AboutView contains a link to GitHub repository', () => {
-  it('link is found', () => {
-    expect(screen.getByText('link')).toBeTruthy()
+describe('AboutView contains links to GitHub repositories', () => {
+  it('links are found', () => {
+    expect(screen.getAllByText('link')).toHaveLength(2)
   })
 
-  it('link has correct href', () => {
-    const href = container
-      .querySelector('#github-url')
-      ?.getAttribute('href')
-    expect(href).toBe(GITHUB_URL)
+  it('frontend source code link has correct href', () => {
+    testHrefs('#github-url-frontend', GITHUB_URL_FRONTEND)
+  })
+
+  it('components source code link has correct href', () => {
+    testHrefs('#github-url-components', GITHUB_URL_COMPONENTS)
   })
 })
+
+const testHrefs = (id: string, expectedHref: string): void => {
+  const href = container.querySelector(id)?.getAttribute('href')
+  expect(href).toBe(expectedHref)
+}

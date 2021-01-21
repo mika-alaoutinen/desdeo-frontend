@@ -1,16 +1,16 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { ScatterSelectionComponent } from 'desdeo-components'
-import { Datum } from 'desdeo-components/build/types/dataTypes'
+import { Coordinate } from 'desdeo-components/build/types/dataTypes'
 
-import { useData } from '../../hooks/selectors'
-import { clearSelected, selectData } from '../../store/data/dataActions'
+import { useCoordinates } from '../../../hooks/selectors'
+import { clearSelected, selectData } from '../../../store/coordinates/coordinateActions'
 
 const ScatterSelection: React.FC = () => {
-  const data = useData()
+  const data = useCoordinates()
   const dispatch = useDispatch()
 
-  const onSelect = (selected: Datum[]): void => {
+  const onSelect = (selected: Coordinate[]): void => {
     dispatch(selectData(selected))
   }
 

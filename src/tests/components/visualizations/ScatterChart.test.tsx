@@ -1,4 +1,4 @@
-import ScatterChart from '../../../components/visualizations/ScatterChart'
+import ScatterChart from '../../../components/visualizations/scatter/ScatterChart'
 
 describe('Component is rendered', () => {
   it('component is truthy', () => {

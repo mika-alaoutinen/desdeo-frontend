@@ -1,10 +1,10 @@
-import { DataAction } from '../../../store/data/dataTypes'
-import { ADD_DATA, CLEAR_SELECTED, SELECT_DATA, SELECT_DATUM } from '../../../store/data/dataTypes'
+import { DataAction } from '../../../store/coordinates/coordinateTypes'
+import { ADD_DATA, CLEAR_SELECTED, SELECT_DATA, SELECT_DATUM } from '../../../store/coordinates/coordinateTypes'
 import { createData, createNewDatum } from '../../testUtils'
 
 import {
   addData, clearSelected, selectData, selectDatum
-} from '../../../store/data/dataActions'
+} from '../../../store/coordinates/coordinateActions'
 
 
 describe('should create actions', () => {

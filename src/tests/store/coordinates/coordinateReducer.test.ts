@@ -1,14 +1,14 @@
 import {
   addData, clearSelected, selectData, selectDatum
-} from '../../../store/data/dataActions'
+} from '../../../store/coordinates/coordinateActions'
 import { createData, createNewDatum } from '../../testUtils'
 
 import reducer, {
   addDataReduce, clearSelectedReduce, selectDataReduce, selectDatumReduce
-} from '../../../store/data/dataReducer'
+} from '../../../store/coordinates/coordinateReducer'
 
 // Testing the reducer
-describe('dataReducer manages state correctly', () => {
+describe('coordinatesReducer manages state correctly', () => {
   it('addData concatenates to state', () => {
     const data = createData()
     const action = addData(data)
