@@ -1,4 +1,4 @@
-import { CoordinateSet } from 'desdeo-components/build/types/dataTypes'
+import { Coordinate, CoordinateSet } from 'desdeo-components/build/types/dataTypes'
 
 // Action names
 export const ADD_SETS = 'ADD_SETS'
@@ -15,5 +15,5 @@ interface AddData {
 
 interface SelectDatum {
   type: typeof SELECT_SET,
-  datum: CoordinateSet
+  datum: Coordinate
 }

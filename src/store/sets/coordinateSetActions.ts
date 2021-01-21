@@ -1,4 +1,4 @@
-import { CoordinateSet } from 'desdeo-components/build/types/dataTypes'
+import { Coordinate, CoordinateSet } from 'desdeo-components/build/types/dataTypes'
 
 import {
   ADD_SETS, SELECT_SET, SetAction
@@ -9,7 +9,7 @@ const addSets = (data: CoordinateSet[]): SetAction => ({
   data
 })
 
-const selectSet = (datum: CoordinateSet): SetAction => ({
+const selectSet = (datum: Coordinate): SetAction => ({
   type: SELECT_SET,
   datum
 })
