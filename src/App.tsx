@@ -5,7 +5,8 @@ import { Container } from '@material-ui/core'
 import Navigation from './components/navigation/Navigation'
 import Routes from './router/Routes'
 import { addData } from './store/coordinates/coordinateActions'
-import { coordinates } from './tests/testdata'
+import { addSets } from './store/coordinateSets/coordinateSetActions'
+import { coordinates, coordinateSets } from './tests/testdata'
 
 const style: React.CSSProperties = {
   fontFamily: 'Roboto',
@@ -16,6 +17,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     dispatch(addData(coordinates))
+    dispatch(addSets(coordinateSets))
   }, [dispatch])
 
   return (
