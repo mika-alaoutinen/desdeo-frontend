@@ -2,7 +2,7 @@ import { Coordinate, CoordinateSet } from 'desdeo-components/build/types/dataTyp
 
 import {
   ADD_SETS, SELECT_SET, SetAction
-} from './coordinateSetTypes'
+} from './setTypes'
 
 const addSets = (data: CoordinateSet[]): SetAction => ({
   type: ADD_SETS,

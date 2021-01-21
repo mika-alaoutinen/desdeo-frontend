@@ -1,7 +1,7 @@
 import { Coordinate, CoordinateSet } from 'desdeo-components/build/types/dataTypes'
 import {
   ADD_SETS, SELECT_SET, SetAction, SetState
-} from './coordinateSetTypes'
+} from './setTypes'
 
 const sets = (state: SetState = [], action: SetAction): SetState => {
   switch (action.type) {

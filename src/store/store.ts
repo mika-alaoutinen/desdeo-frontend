@@ -3,7 +3,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 
 import coordinates from './coordinates/coordinateReducer'
-import sets from './sets/coordinateSetReducer'
+import sets from './sets/setReducer'
 import desdeo from './desdeo/desdeoReducer'
 import input from './userInput/inputReducer'
 
