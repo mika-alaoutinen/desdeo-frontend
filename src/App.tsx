@@ -5,7 +5,7 @@ import { Container } from '@material-ui/core'
 import Navigation from './components/navigation/Navigation'
 import Routes from './router/Routes'
 import { addData } from './store/coordinates/coordinateActions'
-import { coordinates, coordinateSets } from './tests/testdata'
+import { coordinates } from './tests/testdata'
 
 const style: React.CSSProperties = {
   fontFamily: 'Roboto',
