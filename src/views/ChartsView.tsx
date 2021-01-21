@@ -41,7 +41,6 @@ const ChartsView: React.FC = () => {
 
       {createSubHeading('Basic table')}
       {createGrid(<Table />)}
-
     </div>
   )
 }
