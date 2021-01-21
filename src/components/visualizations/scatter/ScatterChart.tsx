@@ -3,8 +3,8 @@ import { useDispatch } from 'react-redux'
 import { ScatterChartComponent } from 'desdeo-components'
 import { Coordinate } from 'desdeo-components/build/types/dataTypes'
 
-import { useData } from '../../hooks/selectors'
-import { selectDatum } from '../../store/data/dataActions'
+import { useData } from '../../../hooks/selectors'
+import { selectDatum } from '../../../store/data/dataActions'
 
 const ScatterChart: React.FC = () => {
   const data = useData()
