@@ -7,4 +7,9 @@ const useCoordinates = (): Coordinate[] =>
 const useCoordinateSets = (): CoordinateSet[] =>
   useSelector(state => state.sets)
 
-export { useCoordinates, useCoordinateSets }
+const useSelectedSet = (): Coordinate =>
+  useSelector(state => state.selectedSet)
+
+export {
+  useCoordinates, useCoordinateSets, useSelectedSet
+}
