@@ -25,18 +25,18 @@ const coordinates = (state: DataState = [], action: DataAction): DataState => {
 }
 
 // Export these for easier testing
-export const addDataReduce = (newData: Coordinate[], data: Coordinate[]): Coordinate[] =>
+const addDataReduce = (newData: Coordinate[], data: Coordinate[]): Coordinate[] =>
   data.concat(newData)
 
-export const clearSelectedReduce = (data: Coordinate[]): Coordinate[] =>
+const clearSelectedReduce = (data: Coordinate[]): Coordinate[] =>
   data.map(datum => setSelected(datum, false))
 
-export const selectDataReduce = (selected: Coordinate[], data: Coordinate[]): Coordinate[] => {
+const selectDataReduce = (selected: Coordinate[], data: Coordinate[]): Coordinate[] => {
   const selectedIDs = selected.map(datum => datum.id)
   return data.map(datum => mapSelected(selectedIDs, datum))
 }
 
-export const selectDatumReduce = (selected: Coordinate, data: Coordinate[]): Coordinate[] =>
+const selectDatumReduce = (selected: Coordinate, data: Coordinate[]): Coordinate[] =>
   data.map(datum => datum.id === selected.id
     ? editSelected(selected)
     : datum)
@@ -56,5 +56,9 @@ const setSelected = (datum: Coordinate, isSelected: boolean): Coordinate => ({
   ...datum,
   isSelected
 })
+
+export {
+  addDataReduce, clearSelectedReduce, selectDataReduce, selectDatumReduce
+}
 
 export default coordinates
