@@ -1,11 +1,11 @@
 import {
   addData, clearSelected, selectData, selectDatum
-} from '../../../store/data/coordinateActions'
+} from '../../../store/coordinates/coordinateActions'
 import { createData, createNewDatum } from '../../testUtils'
 
 import reducer, {
   addDataReduce, clearSelectedReduce, selectDataReduce, selectDatumReduce
-} from '../../../store/data/coordinateReducer'
+} from '../../../store/coordinates/coordinateReducer'
 
 // Testing the reducer
 describe('dataReducer manages state correctly', () => {

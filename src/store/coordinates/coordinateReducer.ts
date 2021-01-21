@@ -4,7 +4,7 @@ import {
   DataAction, DataState
 } from './coordinateTypes'
 
-const data = (state: DataState = [], action: DataAction): DataState => {
+const coordinates = (state: DataState = [], action: DataAction): DataState => {
   switch (action.type) {
 
     case ADD_DATA:
@@ -57,4 +57,4 @@ const setSelected = (datum: Coordinate, isSelected: boolean): Coordinate => ({
   isSelected
 })
 
-export default data
+export default coordinates

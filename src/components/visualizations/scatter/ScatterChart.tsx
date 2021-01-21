@@ -4,7 +4,7 @@ import { ScatterChartComponent } from 'desdeo-components'
 import { Coordinate } from 'desdeo-components/build/types/dataTypes'
 
 import { useData } from '../../../hooks/selectors'
-import { selectDatum } from '../../../store/data/coordinateActions'
+import { selectDatum } from '../../../store/coordinates/coordinateActions'
 
 const ScatterChart: React.FC = () => {
   const data = useData()
