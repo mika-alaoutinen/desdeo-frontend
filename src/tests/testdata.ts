@@ -1,4 +1,6 @@
-import { Coordinate, CoordinateSet } from 'desdeo-components/build/types/dataTypes'
+import {
+  Coordinate, CoordinateSet, ParallelAxesData
+} from 'desdeo-components/build/types/dataTypes'
 
 import { Variable } from '../store/desdeo/desdeoTypes'
 
@@ -37,6 +39,33 @@ export const coordinateSets: CoordinateSet[] = [
     ],
     label: 'dataset 1'
   }
+]
+
+export const filterData: ParallelAxesData[] = [
+  {
+    name: 'Adrien',
+    attributes: [
+      { name: 'strength', value: 5 },
+      { name: 'intelligence', value: 30 },
+      { name: 'luck', value: 17 }
+    ]
+  },
+  {
+    name: 'Brice',
+    attributes: [
+      { name: 'strength', value: 10 },
+      { name: 'intelligence', value: 25 },
+      { name: 'luck', value: 8 }
+    ]
+  },
+  {
+    name: 'Casey',
+    attributes: [
+      { name: 'strength', value: 15 },
+      { name: 'intelligence', value: 20 },
+      { name: 'luck', value: 15 }
+    ]
+  },
 ]
 
 export const testvariables: Variable[] = [
