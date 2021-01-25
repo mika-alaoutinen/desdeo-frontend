@@ -14,7 +14,8 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## 2. Eject script
+
+## 2. Eject scripts
 ### `npm run eject`
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -24,9 +25,11 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+
 ## 3. Linting
 ### `npm run lint`
 Runs linter and fixes linting errors.
+
 
 ## 4. Running the application for local development
 ### `npm start`
@@ -35,6 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
 
 ## 5. Test scripts
 ### `npm test`
@@ -50,3 +54,4 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## TODO
 - [ ] Figure out how to test components that use Redux store.
+- [ ] Add [dependabot](https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot/) config
