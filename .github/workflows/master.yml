@@ -6,8 +6,6 @@
 # Potential workflows:
 # - Create a git tag.
 # - Deploy application to a production environment.
-# - Create a Docker image and push it to Dockerhub.
-# - Generate a report of outdated dependencies.
 
 name: Master branch workflow
 
