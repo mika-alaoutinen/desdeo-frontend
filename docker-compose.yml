@@ -2,14 +2,14 @@ version: '3.8'
 
 services:
   frontend:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: frontend
     image: mikaalaoutinen/desdeo-frontend
     ports:
       - 3001:3000
     volumes:
-      - /app
+      - .:/app
       - /app/node_modules
-    environment:
-      - CHOKIDAR_USEPOLLING=true
     working_dir: /app
