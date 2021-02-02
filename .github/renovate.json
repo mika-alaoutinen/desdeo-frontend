@@ -15,5 +15,6 @@
     }
   ],
   "prCreation": "status-success",
+  "rangeStrategy": "replace",
   "separateMajorMinor": true
 }
