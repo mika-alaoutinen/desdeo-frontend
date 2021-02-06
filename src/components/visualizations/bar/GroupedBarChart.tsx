@@ -1,8 +1,8 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { GroupedBarChartComponent } from 'desdeo-components'
-import { Coordinate } from 'desdeo-components/build/types/dataTypes'
 
+import { Coordinate } from 'data/dataTypes'
 import { selectSet } from 'store/sets/setActions'
 import { useCoordinateSets } from 'hooks/selectors'
 

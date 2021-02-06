@@ -1,4 +1,4 @@
-import { Coordinate, CoordinateSet } from 'desdeo-components/build/types/dataTypes'
+import { Coordinate, CoordinateSet } from 'data/dataTypes'
 
 // Action names
 export const ADD_SETS = 'ADD_SETS'

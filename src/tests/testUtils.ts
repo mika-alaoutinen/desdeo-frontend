@@ -1,4 +1,4 @@
-import { Coordinate } from 'desdeo-components/build/types/dataTypes'
+import { Coordinate } from 'data/dataTypes'
 
 export const createData = (isSelected?: boolean): Coordinate[] => [
   {

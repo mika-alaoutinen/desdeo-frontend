@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 
-import { GITHUB_URL_COMPONENTS, GITHUB_URL_FRONTEND } from 'utils/constants'
+import { GITHUB_URL_COMPONENTS, GITHUB_URL_FRONTEND } from 'misc/constants'
 
 import AboutView from 'views/AboutView'
 
