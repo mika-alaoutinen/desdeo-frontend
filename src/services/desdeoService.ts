@@ -18,5 +18,5 @@ const runIteration = async (iteration: Iteration): Promise<Iteration|void> =>
   Promise.resolve(iteration)
 
 export default {
-  addVariable, addParameters: addParameter, getVariables, runIteration
+  addVariable, addParameter, getVariables, runIteration
 }

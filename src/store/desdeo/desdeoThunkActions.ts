@@ -18,7 +18,7 @@ const addVariable = (newVar: Variable): AppThunk =>
 
 const addParameter = (newParam: Parameter): AppThunk =>
   async (dispatch): Promise<Action> => {
-    const parameter = await desdeo.addParameters(newParam)
+    const parameter = await desdeo.addParameter(newParam)
     return dispatch({
       type: ADD_PARAMETER,
       parameter
