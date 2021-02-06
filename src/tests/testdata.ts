@@ -2,8 +2,6 @@ import {
   Coordinate, CoordinateSet, ParallelAxesData
 } from 'desdeo-components/build/types/dataTypes'
 
-import { Variable } from '../store/desdeo/desdeoTypes'
-
 export const coordinates: Coordinate[] = [
   { id: 'a', x: 10, y: 20, label: 'A', isSelected: true },
   { id: 'b', x: 20, y: 40, label: 'B', isSelected: false },
@@ -66,10 +64,4 @@ export const filterData: ParallelAxesData[] = [
       { name: 'luck', value: 15 }
     ]
   },
-]
-
-export const testvariables: Variable[] = [
-  { name: 'a', value: 15 },
-  { name: 'b', value: 20 },
-  { name: 'c', value: 25 },
 ]
