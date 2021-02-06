@@ -3,8 +3,8 @@ import { useDispatch } from 'react-redux'
 import { BarChartComponent } from 'desdeo-components'
 import { Coordinate } from 'desdeo-components/build/types/dataTypes'
 
-import { useCoordinates } from '../../../hooks/selectors'
-import { selectDatum } from '../../../store/coordinates/coordinateActions'
+import { useCoordinates } from 'hooks/selectors'
+import { selectDatum } from 'store/coordinates/coordinateActions'
 
 const BarChart: React.FC = () => {
   const data = useCoordinates()

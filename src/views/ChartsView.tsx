@@ -1,15 +1,15 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
 
-import BarChart from '../components/visualizations/bar/BarChart'
-import GroupedBarChart from '../components/visualizations/bar/GroupedBarChart'
-import StackedBarChart from '../components/visualizations/bar/StackedBarChart'
-import ParallelAxes from '../components/visualizations/parallelAxes/ParallelAxes'
-import ScatterChart from '../components/visualizations/scatter/ScatterChart'
-import ScatterSelection from '../components/visualizations/scatter/ScatterSelection'
-import Table from '../components/visualizations/table/Table'
+import BarChart from 'components/visualizations/bar/BarChart'
+import GroupedBarChart from 'components/visualizations/bar/GroupedBarChart'
+import StackedBarChart from 'components/visualizations/bar/StackedBarChart'
+import ParallelAxes from 'components/visualizations/parallelAxes/ParallelAxes'
+import ScatterChart from 'components/visualizations/scatter/ScatterChart'
+import ScatterSelection from 'components/visualizations/scatter/ScatterSelection'
+import Table from 'components/visualizations/table/Table'
 
-import { useSelectedSet } from '../hooks/selectors'
+import { useSelectedSet } from 'hooks/selectors'
 
 const ChartsView: React.FC = () => {
   const { id, label, y } = useSelectedSet()

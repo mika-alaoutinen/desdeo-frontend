@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
-import AboutView from '../views/AboutView'
-import ChartsView from '../views/ChartsView'
-import HomeView from '../views/HomeView'
+import AboutView from 'views/AboutView'
+import ChartsView from 'views/ChartsView'
+import HomeView from 'views/HomeView'
 
 interface Link {
   text: string,

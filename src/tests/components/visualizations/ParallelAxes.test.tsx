@@ -1,4 +1,4 @@
-import ParallelAxes from '../../../components/visualizations/parallelAxes/ParallelAxes'
+import ParallelAxes from 'components/visualizations/parallelAxes/ParallelAxes'
 
 describe('Component is rendered', () => {
   it('component is truthy', () => {

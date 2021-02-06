@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { render, RenderResult, screen } from '@testing-library/react'
 
-import Navigation from '../../../components/navigation/Navigation'
+import Navigation from 'components/navigation/Navigation'
 
 let container: Element
 beforeEach(() => {
