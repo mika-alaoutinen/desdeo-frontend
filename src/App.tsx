@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { Container } from '@material-ui/core'
 
-import Navigation from './components/navigation/Navigation'
-import Routes from './router/Routes'
-import { addData } from './store/coordinates/coordinateActions'
-import { addSets } from './store/sets/setActions'
-import { coordinates, coordinateSets } from './tests/testdata'
+import Navigation from 'components/navigation/Navigation'
+import Routes from 'router/Routes'
+import { addData } from 'store/coordinates/coordinateActions'
+import { addSets } from 'store/sets/setActions'
+import { coordinates, coordinateSets } from 'tests/testdata'
 
 const style: React.CSSProperties = {
   fontFamily: 'Roboto',

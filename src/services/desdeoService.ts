@@ -1,4 +1,4 @@
-import { Iteration, Parameter, Variable } from '../store/desdeo/desdeoTypes'
+import { Iteration, Parameter, Variable } from 'store/desdeo/desdeoTypes'
 
 // Placeholder functions that simulate DESDEO's backend API
 const addVariable = async (variable: Variable): Promise<Variable|void> => {

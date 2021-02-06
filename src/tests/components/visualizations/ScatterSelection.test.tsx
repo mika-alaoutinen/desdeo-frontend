@@ -1,4 +1,4 @@
-import ScatterSelection from '../../../components/visualizations/scatter/ScatterSelection'
+import ScatterSelection from 'components/visualizations/scatter/ScatterSelection'
 
 describe('Component is rendered', () => {
   it('component is truthy', () => {

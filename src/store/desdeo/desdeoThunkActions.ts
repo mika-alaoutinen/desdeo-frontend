@@ -4,7 +4,7 @@ import { AppThunk } from '../reduxTypes'
 import {
   ADD_PARAMETER, ADD_VARIABLE, RUN_ITERATION, Parameter, Variable
 } from './desdeoTypes'
-import desdeo from '../../services/desdeoService'
+import desdeo from 'services/desdeoService'
 
 
 const addVariable = (newVar: Variable): AppThunk =>

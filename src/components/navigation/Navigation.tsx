@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { AppBar, Button, Toolbar } from '@material-ui/core'
 
 import NavigationHeader from './NavigationHeader'
-import { about, charts } from '../../router/Routes'
+import { about, charts } from 'router/Routes'
 
 const links = [ about, charts ]
 
