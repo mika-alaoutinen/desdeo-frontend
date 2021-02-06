@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { GITHUB_URL_COMPONENTS, GITHUB_URL_FRONTEND } from 'utils/constants'
+import { GITHUB_URL_COMPONENTS, GITHUB_URL_FRONTEND } from 'misc/constants'
 
 const AboutView: React.FC = () => (
   <div className='AboutView'>
