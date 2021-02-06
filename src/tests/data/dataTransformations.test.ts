@@ -51,8 +51,6 @@ describe('createCriteriaSets produces datasets that are grouped by available cri
   ]
 
   it('transforms data as expected', () => {
-    // todo
-    expect(expected).toBeTruthy()
-    expect(createCriteriaSets(data)).toBeTruthy()
+    expect(createCriteriaSets(data)).toEqual(expected)
   })
 })
