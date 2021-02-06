@@ -1,4 +1,4 @@
-import { Coordinate, CoordinateSet } from 'desdeo-components/build/types/dataTypes'
+import { Coordinate, CoordinateSet } from 'data/dataTypes'
 import { useSelector } from 'store/reduxTypes'
 
 const useCoordinates = (): Coordinate[] =>

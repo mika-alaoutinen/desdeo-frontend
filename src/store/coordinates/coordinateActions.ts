@@ -1,4 +1,4 @@
-import { Coordinate } from 'desdeo-components/build/types/dataTypes'
+import { Coordinate } from 'data/dataTypes'
 
 import {
   ADD_DATA, CLEAR_SELECTED, SELECT_DATA, SELECT_DATUM, DataAction

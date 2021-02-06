@@ -1,4 +1,4 @@
-import { Coordinate } from 'desdeo-components/build/types/dataTypes'
+import { Coordinate } from 'data/dataTypes'
 import { SELECT_SET, SetAction } from './setTypes'
 
 const init: Coordinate = {

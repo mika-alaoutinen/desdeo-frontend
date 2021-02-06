@@ -1,4 +1,4 @@
-import { Coordinate } from 'desdeo-components/build/types/dataTypes'
+import { Coordinate } from 'data/dataTypes'
 
 // Action names
 export const ADD_DATA = 'ADD_DATA'

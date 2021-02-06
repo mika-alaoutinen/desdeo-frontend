@@ -1,8 +1,8 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { ScatterSelectionComponent } from 'desdeo-components'
-import { Coordinate } from 'desdeo-components/build/types/dataTypes'
 
+import { Coordinate } from 'data/dataTypes'
 import { useCoordinates } from 'hooks/selectors'
 import { clearSelected, selectData } from 'store/coordinates/coordinateActions'
 

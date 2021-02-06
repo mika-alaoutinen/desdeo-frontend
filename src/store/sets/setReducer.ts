@@ -1,4 +1,4 @@
-import { Coordinate, CoordinateSet } from 'desdeo-components/build/types/dataTypes'
+import { Coordinate, CoordinateSet } from 'data/dataTypes'
 import {
   ADD_SETS, SELECT_SET, SetAction, SetState
 } from './setTypes'
