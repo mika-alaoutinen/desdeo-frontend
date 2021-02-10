@@ -17,6 +17,8 @@ const StackedBarChart: React.FC = () => {
   return (
     <StackedBarChartComponent
       datasets={data}
+      labels={[ 'WQ Fishery', 'WQ City', 'ROI', 'City Tax', 'Plant Resources' ]}
+      orientation={'horizontal'}
       onClick={onClick}
     />
   )

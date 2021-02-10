@@ -17,7 +17,8 @@ const GroupedBarChart: React.FC = () => {
   return (
     <GroupedBarChartComponent
       datasets={data}
-      horizontal={true}
+      labels={[ 'WQ\nFishery', 'WQ\nCity', 'ROI', 'City\nTax', 'Plant\nResources' ]}
+      orientation={'vertical'}
       onClick={onClick}
     />
   )
