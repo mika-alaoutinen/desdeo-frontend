@@ -41,7 +41,6 @@ const coordinateSets: CoordinateSet[] = [
       { id: 'H', x: 2, y: 15, label: 'C', isSelected: true },
       { id: 'I', x: 3, y: 60, label: 'C', isSelected: true }
     ],
-    label: 'dataset 3'
   },
 
   {
@@ -50,7 +49,6 @@ const coordinateSets: CoordinateSet[] = [
       { id: 'e', x: 2, y: 15, label: 'B', isSelected: false },
       { id: 'f', x: 3, y: 60, label: 'B', isSelected: false }
     ],
-    label: 'dataset 2'
   },
 
   {
@@ -59,33 +57,26 @@ const coordinateSets: CoordinateSet[] = [
       { id: 'b', x: 2, y: 40, label: 'A', isSelected: false },
       { id: 'c', x: 3, y: 70, label: 'A' }
     ],
-    label: 'dataset 1'
   }
 ]
 
 const filterData: ParallelAxesData[] = [
   {
-    name: 'Adrien',
+    label: 'Alternative 1',
     attributes: [
-      { name: 'strength', value: 5 },
-      { name: 'intelligence', value: 30 },
-      { name: 'luck', value: 17 }
+      { x: 'wq fishery', y: 5.758127 },
+      { x: 'wq city', y: 3.17527 },
+      { x: 'roi', y: 6.090291 },
+      { x: 'city tax', y: 2.444406 },
     ]
   },
   {
-    name: 'Brice',
+    label: 'Alternative 2',
     attributes: [
-      { name: 'strength', value: 10 },
-      { name: 'intelligence', value: 25 },
-      { name: 'luck', value: 8 }
-    ]
-  },
-  {
-    name: 'Casey',
-    attributes: [
-      { name: 'strength', value: 15 },
-      { name: 'intelligence', value: 20 },
-      { name: 'luck', value: 15 }
+      { x: 'wq fishery', y: 6.042483 },
+      { x: 'wq city', y: 3.410843 },
+      { x: 'roi', y: 6.887735 },
+      { x: 'city tax', y: 8.989781 },
     ]
   },
 ]

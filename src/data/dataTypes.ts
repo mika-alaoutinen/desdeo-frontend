@@ -12,6 +12,5 @@ interface DataColumn {
 }
 
 export type {
-  Coordinate, CoordinateSet, ParallelAxesData,
-  DataSet
+  Coordinate, CoordinateSet, DataSet, ParallelAxesData,
 }
