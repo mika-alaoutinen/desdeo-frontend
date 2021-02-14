@@ -1,25 +1,25 @@
 import { Coordinate } from 'misc/dataTypes'
 
 import {
-  ADD_DATA, CLEAR_SELECTED, SELECT_DATA, SELECT_DATUM, DataAction
+  ADD_COORDINATES, CLEAR_SELECTED, SELECT_COORDINATES, SELECT_COORDINATE, CoordinateAction
 } from './coordinateTypes'
 
-const addCoordinates = (data: Coordinate[]): DataAction => ({
-  type: ADD_DATA,
+const addCoordinates = (data: Coordinate[]): CoordinateAction => ({
+  type: ADD_COORDINATES,
   data
 })
 
-const clearSelected = (): DataAction => ({
+const clearSelected = (): CoordinateAction => ({
   type: CLEAR_SELECTED
 })
 
-const selectCoordinates = (data: Coordinate[]): DataAction => ({
-  type: SELECT_DATA,
+const selectCoordinates = (data: Coordinate[]): CoordinateAction => ({
+  type: SELECT_COORDINATES,
   data
 })
 
-const selectCoordinate = (datum: Coordinate): DataAction => ({
-  type: SELECT_DATUM,
+const selectCoordinate = (datum: Coordinate): CoordinateAction => ({
+  type: SELECT_COORDINATE,
   datum
 })
 

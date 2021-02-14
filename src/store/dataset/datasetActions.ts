@@ -1,15 +1,15 @@
 import { Coordinate, DataSet } from 'misc/dataTypes'
 import {
-  ADD_SETS, SELECT_SET, SetAction
+  ADD_DATASET, SELECT_DATUM, DatasetAction
 } from './datasetTypes'
 
-const addDataset = (data: DataSet): SetAction => ({
-  type: ADD_SETS,
+const addDataset = (data: DataSet): DatasetAction => ({
+  type: ADD_DATASET,
   data
 })
 
-const selectDatum = (datum: Coordinate): SetAction => ({
-  type: SELECT_SET,
+const selectDatum = (datum: Coordinate): DatasetAction => ({
+  type: SELECT_DATUM,
   datum
 })
 

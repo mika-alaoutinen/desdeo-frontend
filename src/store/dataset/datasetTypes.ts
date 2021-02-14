@@ -1,19 +1,19 @@
 import { Coordinate, DataSet } from 'misc/dataTypes'
 
 // Action names
-export const ADD_SETS = 'ADD_SETS'
-export const SELECT_SET = 'SELECT_SET'
+export const ADD_DATASET = 'ADD_DATASET'
+export const SELECT_DATUM = 'SELECT_DATUM'
 
 // Types for state and actions
-export type SetState = DataSet
-export type SetAction = AddData | SelectDatum
+export type DatasetState = DataSet
+export type DatasetAction = AddData | SelectDatum
 
 interface AddData {
-  type: typeof ADD_SETS,
+  type: typeof ADD_DATASET,
   data: DataSet
 }
 
 interface SelectDatum {
-  type: typeof SELECT_SET,
+  type: typeof SELECT_DATUM,
   datum: Coordinate
 }
