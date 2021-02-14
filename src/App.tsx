@@ -5,7 +5,7 @@ import { Container } from '@material-ui/core'
 import Navigation from 'components/navigation/Navigation'
 import Routes from 'router/Routes'
 import { addCoordinates } from 'store/coordinates/coordinateActions'
-import { addDataset } from 'store/sets/setActions'
+import { addDataset } from 'store/dataset/datasetActions'
 import { coordinates, testdata } from 'tests/testdata'
 
 const style: React.CSSProperties = {

@@ -1,5 +1,5 @@
 import { Coordinate, DataSet } from 'data/dataTypes'
-import { ADD_SETS, SELECT_SET, SetAction, SetState } from './setTypes'
+import { ADD_SETS, SELECT_SET, SetAction, SetState } from './datasetTypes'
 
 const dataset = (state: SetState = [], action: SetAction): SetState => {
   switch (action.type) {

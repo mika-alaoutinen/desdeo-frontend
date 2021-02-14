@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { StackedBarChartComponent } from 'desdeo-components'
 
 import { Coordinate } from 'data/dataTypes'
-import { selectDatum } from 'store/sets/setActions'
+import { selectDatum } from 'store/dataset/datasetActions'
 import { testdata } from 'tests/testdata'
 
 // TODO: Read data from store

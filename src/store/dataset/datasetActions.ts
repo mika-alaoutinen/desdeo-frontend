@@ -1,7 +1,7 @@
 import { Coordinate, DataSet } from 'data/dataTypes'
 import {
   ADD_SETS, SELECT_SET, SetAction
-} from './setTypes'
+} from './datasetTypes'
 
 const addDataset = (data: DataSet): SetAction => ({
   type: ADD_SETS,

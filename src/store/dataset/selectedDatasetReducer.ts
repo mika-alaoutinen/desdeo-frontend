@@ -1,5 +1,5 @@
 import { Coordinate } from 'data/dataTypes'
-import { SELECT_SET, SetAction } from './setTypes'
+import { SELECT_SET, SetAction } from './datasetTypes'
 
 const init: Coordinate = {
   id: '1',
@@ -8,7 +8,7 @@ const init: Coordinate = {
 }
 
 // Temporary reducer used to display a selected coordinate on the UI
-const selectedSet = (state: Coordinate = init, action: SetAction): Coordinate => {
+const selectedDataset = (state: Coordinate = init, action: SetAction): Coordinate => {
   switch (action.type) {
 
     case SELECT_SET:
@@ -19,4 +19,4 @@ const selectedSet = (state: Coordinate = init, action: SetAction): Coordinate =>
   }
 }
 
-export default selectedSet
+export default selectedDataset
