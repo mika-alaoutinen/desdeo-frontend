@@ -1,12 +1,12 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { TableComponent } from 'desdeo-components'
+import { CoordinateTableComponent } from 'desdeo-components'
 
 import { Coordinate } from 'data/dataTypes'
 import { useCoordinates } from 'hooks/selectors'
 import { selectDatum } from 'store/coordinates/coordinateActions'
 
-const Table: React.FC = () => {
+const CoordinateTable: React.FC = () => {
   const data = useCoordinates()
   const dispatch = useDispatch()
 
@@ -15,11 +15,11 @@ const Table: React.FC = () => {
   }
 
   return (
-    <TableComponent
+    <CoordinateTableComponent
       data={data}
       onClick={onClick}
     />
   )
 }
 
-export default Table
+export default CoordinateTable

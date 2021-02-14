@@ -4,10 +4,12 @@ import { GroupedBarChartComponent } from 'desdeo-components'
 
 import { Coordinate } from 'data/dataTypes'
 import { selectSet } from 'store/sets/setActions'
-import { useCoordinateSets } from 'hooks/selectors'
 
+import { testdata } from 'tests/testdata'
+
+// TODO: Read data from store
 const GroupedBarChart: React.FC = () => {
-  const data = useCoordinateSets()
+  const data = testdata
   const dispatch = useDispatch()
 
   const onClick = (clicked: Coordinate): void => {
@@ -16,8 +18,8 @@ const GroupedBarChart: React.FC = () => {
 
   return (
     <GroupedBarChartComponent
-      datasets={data}
-      labels={[ 'WQ\nFishery', 'WQ\nCity', 'ROI', 'City\nTax', 'Plant\nResources' ]}
+      data={data}
+      grouping={'alternatives'}
       orientation={'vertical'}
       onClick={onClick}
     />
