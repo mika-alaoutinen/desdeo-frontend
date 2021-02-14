@@ -1,22 +1,22 @@
 import { Coordinate } from 'misc/dataTypes'
 import {
-  ADD_DATA, CLEAR_SELECTED, SELECT_DATA, SELECT_DATUM,
-  DataAction, DataState
+  ADD_COORDINATES, CLEAR_SELECTED, SELECT_COORDINATES, SELECT_COORDINATE,
+  CoordinateAction, CoordinateState
 } from './coordinateTypes'
 
-const coordinates = (state: DataState = [], action: DataAction): DataState => {
+const coordinates = (state: CoordinateState = [], action: CoordinateAction): CoordinateState => {
   switch (action.type) {
 
-    case ADD_DATA:
+    case ADD_COORDINATES:
       return addDataReduce(action.data, state)
 
     case CLEAR_SELECTED:
       return clearSelectedReduce(state)
 
-    case SELECT_DATA:
+    case SELECT_COORDINATES:
       return selectDataReduce(action.data, state)
 
-    case SELECT_DATUM:
+    case SELECT_COORDINATE:
       return selectDatumReduce(action.datum, state)
 
     default:

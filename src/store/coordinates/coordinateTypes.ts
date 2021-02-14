@@ -1,21 +1,21 @@
 import { Coordinate } from 'misc/dataTypes'
 
 // Action names
-export const ADD_DATA = 'ADD_DATA'
+export const ADD_COORDINATES = 'ADD_COORDINATES'
 export const CLEAR_SELECTED = 'CLEAR SELECTED'
-export const SELECT_DATA = 'SELECT_DATA'
-export const SELECT_DATUM = 'SELECT_DATUM'
+export const SELECT_COORDINATES = 'SELECT_COORDINATES'
+export const SELECT_COORDINATE = 'SELECT_COORDINATE'
 
 // Types for state and actions
-export type DataState = Coordinate[]
-export type DataAction =
-  | AddData
+export type CoordinateState = Coordinate[]
+export type CoordinateAction =
+  | AddCoordinate
   | ClearSelected
-  | SelectData
-  | SelectDatum
+  | SelectCoordinates
+  | SelectCoordinate
 
-interface AddData {
-  type: typeof ADD_DATA,
+interface AddCoordinate {
+  type: typeof ADD_COORDINATES,
   data: Coordinate[]
 }
 
@@ -23,12 +23,12 @@ interface ClearSelected {
   type: typeof CLEAR_SELECTED
 }
 
-interface SelectData {
-  type: typeof SELECT_DATA,
+interface SelectCoordinates {
+  type: typeof SELECT_COORDINATES,
   data: Coordinate[]
 }
 
-interface SelectDatum {
-  type: typeof SELECT_DATUM,
+interface SelectCoordinate {
+  type: typeof SELECT_COORDINATE,
   datum: Coordinate
 }
