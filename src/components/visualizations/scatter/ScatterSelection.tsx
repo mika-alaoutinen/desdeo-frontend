@@ -4,14 +4,14 @@ import { ScatterSelectionComponent } from 'desdeo-components'
 
 import { Coordinate } from 'data/dataTypes'
 import { useCoordinates } from 'hooks/selectors'
-import { clearSelected, selectData } from 'store/coordinates/coordinateActions'
+import { clearSelected, selectCoordinates } from 'store/coordinates/coordinateActions'
 
 const ScatterSelection: React.FC = () => {
   const data = useCoordinates()
   const dispatch = useDispatch()
 
   const onSelect = (selected: Coordinate[]): void => {
-    dispatch(selectData(selected))
+    dispatch(selectCoordinates(selected))
   }
 
   const onSelectionCleared = (): void => {

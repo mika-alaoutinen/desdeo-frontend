@@ -8,7 +8,7 @@ const useCoordinateSets = (): DataSet =>
   useSelector(state => state.dataset)
 
 const useSelectedSet = (): Coordinate =>
-  useSelector(state => state.selectedSet)
+  useSelector(state => state.selectedDataset)
 
 export {
   useCoordinates, useCoordinateSets, useSelectedSet
