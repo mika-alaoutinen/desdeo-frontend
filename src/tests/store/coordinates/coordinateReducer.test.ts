@@ -1,4 +1,6 @@
-import { addData, clearSelected, selectData, selectDatum } from 'store/coordinates/coordinateActions'
+import {
+  addCoordinates, clearSelected, selectCoordinate, selectCoordinates
+} from 'store/coordinates/coordinateActions'
 import { createData, createNewDatum } from 'tests/testUtils'
 
 import reducer, {
@@ -9,7 +11,7 @@ import reducer, {
 describe('coordinatesReducer manages state correctly', () => {
   it('addData concatenates to state', () => {
     const data = createData()
-    const action = addData(data)
+    const action = addCoordinates(data)
     const state = reducer([], action)
     expect(state).toEqual(data)
   })
@@ -23,7 +25,7 @@ describe('coordinatesReducer manages state correctly', () => {
 
   it('selectData sets isSelected property to true', () => {
     const data = createData(false)
-    const action = selectData(data.slice(0, 1))
+    const action = selectCoordinates(data.slice(0, 1))
     const state = reducer(data, action)
     expect(state[0].isSelected).toBe(true)
     expect(state[1].isSelected).toBeFalsy()
@@ -31,7 +33,7 @@ describe('coordinatesReducer manages state correctly', () => {
 
   it('selectDatum sets isSelected property true for a single datum', () => {
     const data = createData(false)
-    const action = selectDatum(data[0])
+    const action = selectCoordinate(data[0])
     const state = reducer(data, action)
     expect(state[0].isSelected).toBe(true)
     expect(state[1].isSelected).toBeFalsy()
