@@ -8,40 +8,29 @@ const coordinates = (state: CoordinateState = [], action: CoordinateAction): Coo
   switch (action.type) {
 
     case ADD_COORDINATES:
-      return addDataReduce(action.data, state)
+      return state.concat(action.data)
 
     case CLEAR_SELECTED:
-      return clearSelectedReduce(state)
+      return state.map(coordinate => setSelected(coordinate, false))
 
     case SELECT_COORDINATES:
-      return selectDataReduce(action.data, state)
+      return state.map(coordinate => {
+        const selectedIDs = action.data.map(selected => selected.id)
+        return mapSelected(selectedIDs, coordinate)
+      })
 
     case SELECT_COORDINATE:
-      return selectDatumReduce(action.datum, state)
+      return state.map(coordinate =>
+        coordinate.id === action.datum.id ?
+          editSelected(action.datum)
+          : coordinate
+      )
 
     default:
       return state
   }
 }
 
-// Export these for easier testing
-const addDataReduce = (newData: Coordinate[], data: Coordinate[]): Coordinate[] =>
-  data.concat(newData)
-
-const clearSelectedReduce = (data: Coordinate[]): Coordinate[] =>
-  data.map(datum => setSelected(datum, false))
-
-const selectDataReduce = (selected: Coordinate[], data: Coordinate[]): Coordinate[] => {
-  const selectedIDs = selected.map(datum => datum.id)
-  return data.map(datum => mapSelected(selectedIDs, datum))
-}
-
-const selectDatumReduce = (selected: Coordinate, data: Coordinate[]): Coordinate[] =>
-  data.map(datum => datum.id === selected.id
-    ? editSelected(selected)
-    : datum)
-
-// Utility functions
 const editSelected = (datum: Coordinate): Coordinate =>
   datum.isSelected === undefined
     ? setSelected(datum, true)
@@ -56,9 +45,5 @@ const setSelected = (datum: Coordinate, isSelected: boolean): Coordinate => ({
   ...datum,
   isSelected
 })
-
-export {
-  addDataReduce, clearSelectedReduce, selectDataReduce, selectDatumReduce
-}
 
 export default coordinates
