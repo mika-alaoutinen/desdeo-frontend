@@ -1,6 +1,14 @@
 import { Coordinate, DataSet, ParallelAxesData } from 'data/dataTypes'
 
-const optimizationData: DataSet = [
+const coordinates: Coordinate[] = [
+  { id: 'a', x: 10, y: 20, label: 'A', isSelected: true },
+  { id: 'b', x: 20, y: 40, label: 'B', isSelected: false },
+  { id: 'c', x: 30, y: 70, label: 'C' },
+  { id: 'd', x: 40, y: 30, label: 'D', isSelected: true },
+  { id: 'e', x: 50, y: 50, label: 'E' },
+]
+
+const testdata: DataSet = [
   {
     label: 'WQ Fishery',
     data: [ 6.042483, 5.758127, 6.287081, 6.134672, 5.610188, 5.231501, 6.34, 6.291364, 5.407513, 6.019503 ]
@@ -23,36 +31,25 @@ const optimizationData: DataSet = [
   }
 ]
 
-// Old test data
-const coordinates: Coordinate[] = [
-  { id: 'a', x: 10, y: 20, label: 'A', isSelected: true },
-  { id: 'b', x: 20, y: 40, label: 'B', isSelected: false },
-  { id: 'c', x: 30, y: 70, label: 'C' },
-  { id: 'd', x: 40, y: 30, label: 'D', isSelected: true },
-  { id: 'e', x: 50, y: 50, label: 'E' },
-]
-
 const filterData: ParallelAxesData[] = [
   {
     label: 'Alternative 1',
     attributes: [
-      { x: 'wq fishery', y: 5.758127 },
-      { x: 'wq city', y: 3.17527 },
-      { x: 'roi', y: 6.090291 },
-      { x: 'city tax', y: 2.444406 },
+      { id: 'wq-fishery-1', x: 'wq fishery', y: 5.758127 },
+      { id: 'wq-city-1', x: 'wq city', y: 3.17527 },
+      { id: 'roi-1', x: 'roi', y: 6.090291 },
+      { id: 'city-tax-1', x: 'city tax', y: 2.444406 },
     ]
   },
   {
     label: 'Alternative 2',
     attributes: [
-      { x: 'wq fishery', y: 6.042483 },
-      { x: 'wq city', y: 3.410843 },
-      { x: 'roi', y: 6.887735 },
-      { x: 'city tax', y: 8.989781 },
+      { id: 'wq-fishery-2', x: 'wq fishery', y: 6.042483 },
+      { id: 'wq-city-2', x: 'wq city', y: 3.410843 },
+      { id: 'roi-2', x: 'roi', y: 6.887735 },
+      { id: 'city-tax-2', x: 'city tax', y: 8.989781 },
     ]
   },
 ]
 
-export {
-  coordinates, filterData, optimizationData
-}
+export { coordinates, filterData, testdata }
