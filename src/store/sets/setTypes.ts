@@ -1,16 +1,16 @@
-import { Coordinate, CoordinateSet } from 'data/dataTypes'
+import { Coordinate, DataSet } from 'data/dataTypes'
 
 // Action names
 export const ADD_SETS = 'ADD_SETS'
 export const SELECT_SET = 'SELECT_SET'
 
 // Types for state and actions
-export type SetState = CoordinateSet[]
+export type SetState = DataSet
 export type SetAction = AddData | SelectDatum
 
 interface AddData {
   type: typeof ADD_SETS,
-  data: CoordinateSet[]
+  data: DataSet
 }
 
 interface SelectDatum {

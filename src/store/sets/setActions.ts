@@ -1,16 +1,16 @@
-import { Coordinate, CoordinateSet } from 'data/dataTypes'
+import { Coordinate, DataSet } from 'data/dataTypes'
 import {
   ADD_SETS, SELECT_SET, SetAction
 } from './setTypes'
 
-const addSets = (data: CoordinateSet[]): SetAction => ({
+const addDataset = (data: DataSet): SetAction => ({
   type: ADD_SETS,
   data
 })
 
-const selectSet = (datum: Coordinate): SetAction => ({
+const selectDatum = (datum: Coordinate): SetAction => ({
   type: SELECT_SET,
   datum
 })
 
-export { addSets, selectSet }
+export { addDataset, selectDatum }

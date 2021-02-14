@@ -1,7 +1,5 @@
-import { Coordinate, CoordinateSet } from 'data/dataTypes'
-import {
-  ADD_SETS, SELECT_SET, SetAction, SetState
-} from './setTypes'
+import { Coordinate, DataSet } from 'data/dataTypes'
+import { ADD_SETS, SELECT_SET, SetAction, SetState } from './setTypes'
 
 const sets = (state: SetState = [], action: SetAction): SetState => {
   switch (action.type) {
@@ -18,7 +16,7 @@ const sets = (state: SetState = [], action: SetAction): SetState => {
   }
 }
 
-const selectSet = (clicked: Coordinate, state: CoordinateSet[]): SetState => {
+const selectSet = (clicked: Coordinate, state: DataSet): SetState => {
   console.log('clicked', clicked)
   return state
 }
