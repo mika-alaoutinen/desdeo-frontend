@@ -1,7 +1,7 @@
 import { Coordinate, DataSet } from 'data/dataTypes'
 import { ADD_SETS, SELECT_SET, SetAction, SetState } from './setTypes'
 
-const sets = (state: SetState = [], action: SetAction): SetState => {
+const dataset = (state: SetState = [], action: SetAction): SetState => {
   switch (action.type) {
 
     case ADD_SETS:
@@ -21,4 +21,4 @@ const selectSet = (clicked: Coordinate, state: DataSet): SetState => {
   return state
 }
 
-export default sets
+export default dataset

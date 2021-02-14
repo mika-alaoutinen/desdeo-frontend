@@ -4,13 +4,13 @@ import thunk from 'redux-thunk'
 
 import coordinates from './coordinates/coordinateReducer'
 import desdeo from './desdeo/desdeoReducer'
-import sets from './sets/setReducer'
+import dataset from './sets/setReducer'
 import selectedSet from './sets/selectedSetReducer'
 
 export const reducer = combineReducers({
   coordinates,
+  dataset,
   desdeo,
-  sets,
   selectedSet,
 })
 
