@@ -1,13 +1,14 @@
 import React from 'react'
 import { ParallelAxesComponent } from 'desdeo-components'
 
-import { testdata } from 'tests/testdata'
+import { useDataset } from 'hooks/selectors'
 
-// TODO: Read data from store
 const ParallelAxes: React.FC = () => {
+  const data = useDataset()
+
   return (
     <ParallelAxesComponent
-      data={testdata}
+      data={data}
     />
   )
 }

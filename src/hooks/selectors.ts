@@ -4,12 +4,12 @@ import { useSelector } from 'store/reduxTypes'
 const useCoordinates = (): Coordinate[] =>
   useSelector(state => state.coordinates)
 
-const useCoordinateSets = (): DataSet =>
+const useDataset = (): DataSet =>
   useSelector(state => state.dataset)
 
 const useSelectedSet = (): Coordinate =>
   useSelector(state => state.selectedDataset)
 
 export {
-  useCoordinates, useCoordinateSets, useSelectedSet
+  useCoordinates, useDataset, useSelectedSet
 }

@@ -3,12 +3,11 @@ import { useDispatch } from 'react-redux'
 import { StackedBarChartComponent } from 'desdeo-components'
 
 import { Coordinate } from 'data/dataTypes'
+import { useDataset } from 'hooks/selectors'
 import { selectDatum } from 'store/dataset/datasetActions'
-import { testdata } from 'tests/testdata'
 
-// TODO: Read data from store
 const StackedBarChart: React.FC = () => {
-  const data = testdata
+  const data = useDataset()
   const dispatch = useDispatch()
 
   const onClick = (clicked: Coordinate): void => {
