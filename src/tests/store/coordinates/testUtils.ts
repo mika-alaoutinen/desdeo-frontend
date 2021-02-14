@@ -1,6 +1,6 @@
 import { Coordinate } from 'misc/dataTypes'
 
-export const createData = (isSelected?: boolean): Coordinate[] => [
+const createCoordinates = (isSelected?: boolean): Coordinate[] => [
   {
     id: '1',
     label: 'A',
@@ -17,8 +17,10 @@ export const createData = (isSelected?: boolean): Coordinate[] => [
   }
 ]
 
-export const createNewDatum = (): Coordinate => ({
+const createCoordinate = (): Coordinate => ({
   id: '10',
   x: 0,
   y: 0
 })
+
+export { createCoordinate, createCoordinates }

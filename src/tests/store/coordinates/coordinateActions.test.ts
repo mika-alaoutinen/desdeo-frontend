@@ -1,7 +1,7 @@
 import {
   ADD_COORDINATES, CLEAR_SELECTED, SELECT_COORDINATES, SELECT_COORDINATE
 } from 'store/coordinates/coordinateTypes'
-import { createData, createNewDatum } from 'tests/testUtils'
+import { createCoordinates, createCoordinate } from 'tests/store/coordinates/testUtils'
 
 import {
   addCoordinates, clearSelected, selectCoordinate, selectCoordinates
@@ -9,7 +9,7 @@ import {
 
 describe('should create actions', () => {
   it('should create an action to add new data', () => {
-    const data = createData()
+    const data = createCoordinates()
     expect(addCoordinates(data)).toEqual({ type: ADD_COORDINATES, data })
   })
 
@@ -18,12 +18,12 @@ describe('should create actions', () => {
   })
 
   it('should create an action to select multiple datum', () => {
-    const data = createData()
+    const data = createCoordinates()
     expect(selectCoordinates(data)).toEqual({ type: SELECT_COORDINATES, data })
   })
 
   it('should create an action to select a single datum', () => {
-    const datum = createNewDatum()
+    const datum = createCoordinate()
     expect(selectCoordinate(datum)).toEqual({ type: SELECT_COORDINATE, datum })
   })
 })
