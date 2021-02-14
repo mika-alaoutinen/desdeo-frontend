@@ -35,7 +35,7 @@
     "lint": "eslint --ext ts,tsx . --fix",
     "start": "react-scripts start",
     "test": "npm run test:unit",
-    "test:coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
+    "test:coverage": "react-scripts test --env=jsdom --watchAll=false --coverage --collectCoverageFrom=!src/tests/**",
     "test:unit": "react-scripts test"
   },
   "eslintConfig": {
