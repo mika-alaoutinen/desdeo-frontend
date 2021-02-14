@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { GroupedBarChartComponent } from 'desdeo-components'
 
 import { Coordinate } from 'data/dataTypes'
-import { selectSet } from 'store/sets/setActions'
+import { selectDatum } from 'store/sets/setActions'
 
 import { testdata } from 'tests/testdata'
 
@@ -13,7 +13,7 @@ const GroupedBarChart: React.FC = () => {
   const dispatch = useDispatch()
 
   const onClick = (clicked: Coordinate): void => {
-    dispatch(selectSet(clicked))
+    dispatch(selectDatum(clicked))
   }
 
   return (
