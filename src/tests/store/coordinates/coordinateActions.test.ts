@@ -7,7 +7,7 @@ import {
   addCoordinates, clearSelected, selectCoordinate, selectCoordinates
 } from 'store/coordinates/coordinateActions'
 
-describe('should create actions', () => {
+describe('Should create actions', () => {
   it('should create an action to add new data', () => {
     const data = createCoordinates()
     expect(addCoordinates(data)).toEqual({ type: ADD_COORDINATES, data })
