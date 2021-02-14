@@ -1,4 +1,4 @@
-import { Coordinate, DataSet } from 'data/dataTypes'
+import { Coordinate, DataSet } from 'misc/dataTypes'
 import { ADD_SETS, SELECT_SET, SetAction, SetState } from './datasetTypes'
 
 const dataset = (state: SetState = [], action: SetAction): SetState => {

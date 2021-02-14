@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { GroupedBarChartComponent } from 'desdeo-components'
 
-import { Coordinate } from 'data/dataTypes'
+import { Coordinate } from 'misc/dataTypes'
 import { useDataset } from 'hooks/selectors'
 import { selectDatum } from 'store/dataset/datasetActions'
 

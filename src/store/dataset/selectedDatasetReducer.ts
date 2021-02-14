@@ -1,4 +1,4 @@
-import { Coordinate } from 'data/dataTypes'
+import { Coordinate } from 'misc/dataTypes'
 import { SELECT_SET, SetAction } from './datasetTypes'
 
 const init: Coordinate = {

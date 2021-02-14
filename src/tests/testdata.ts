@@ -1,4 +1,4 @@
-import { Coordinate, DataSet, ParallelAxesData } from 'data/dataTypes'
+import { Coordinate, DataSet, ParallelAxesData } from 'misc/dataTypes'
 
 const coordinates: Coordinate[] = [
   { id: 'a', x: 10, y: 20, label: 'A', isSelected: true },
