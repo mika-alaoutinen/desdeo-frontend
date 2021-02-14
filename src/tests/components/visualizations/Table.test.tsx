@@ -1,7 +1,7 @@
-import Table from 'components/visualizations/table/Table'
+import CoordinateTable from 'components/visualizations/table/CoordinateTable'
 
 describe('Component is rendered', () => {
   it('component is truthy', () => {
-    expect(Table).toBeTruthy()
+    expect(CoordinateTable).toBeTruthy()
   })
 })

@@ -1,8 +1,14 @@
-import {
-  Coordinate, CoordinateSet, DataSet, ParallelAxesData
-} from 'data/dataTypes'
+import { Coordinate, DataSet, ParallelAxesData } from 'misc/dataTypes'
 
-const optimizationData: DataSet = [
+const coordinates: Coordinate[] = [
+  { id: 'a', x: 10, y: 20, label: 'A', isSelected: true },
+  { id: 'b', x: 20, y: 40, label: 'B', isSelected: false },
+  { id: 'c', x: 30, y: 70, label: 'C' },
+  { id: 'd', x: 40, y: 30, label: 'D', isSelected: true },
+  { id: 'e', x: 50, y: 50, label: 'E' },
+]
+
+const testdata: DataSet = [
   {
     label: 'WQ Fishery',
     data: [ 6.042483, 5.758127, 6.287081, 6.134672, 5.610188, 5.231501, 6.34, 6.291364, 5.407513, 6.019503 ]
@@ -25,71 +31,25 @@ const optimizationData: DataSet = [
   }
 ]
 
-// Old test data
-const coordinates: Coordinate[] = [
-  { id: 'a', x: 10, y: 20, label: 'A', isSelected: true },
-  { id: 'b', x: 20, y: 40, label: 'B', isSelected: false },
-  { id: 'c', x: 30, y: 70, label: 'C' },
-  { id: 'd', x: 40, y: 30, label: 'D', isSelected: true },
-  { id: 'e', x: 50, y: 50, label: 'E' },
-]
-
-const coordinateSets: CoordinateSet[] = [
-  {
-    data: [
-      { id: 'G', x: 1, y: 80, label: 'C', isSelected: true },
-      { id: 'H', x: 2, y: 15, label: 'C', isSelected: true },
-      { id: 'I', x: 3, y: 60, label: 'C', isSelected: true }
-    ],
-    label: 'dataset 3'
-  },
-
-  {
-    data: [
-      { id: 'd', x: 1, y: 10, label: 'B', isSelected: false },
-      { id: 'e', x: 2, y: 15, label: 'B', isSelected: false },
-      { id: 'f', x: 3, y: 60, label: 'B', isSelected: false }
-    ],
-    label: 'dataset 2'
-  },
-
-  {
-    data: [
-      { id: 'a', x: 1, y: 20, label: 'A', isSelected: true },
-      { id: 'b', x: 2, y: 40, label: 'A', isSelected: false },
-      { id: 'c', x: 3, y: 70, label: 'A' }
-    ],
-    label: 'dataset 1'
-  }
-]
-
 const filterData: ParallelAxesData[] = [
   {
-    name: 'Adrien',
+    label: 'Alternative 1',
     attributes: [
-      { name: 'strength', value: 5 },
-      { name: 'intelligence', value: 30 },
-      { name: 'luck', value: 17 }
+      { id: 'wq-fishery-1', x: 'wq fishery', y: 5.758127 },
+      { id: 'wq-city-1', x: 'wq city', y: 3.17527 },
+      { id: 'roi-1', x: 'roi', y: 6.090291 },
+      { id: 'city-tax-1', x: 'city tax', y: 2.444406 },
     ]
   },
   {
-    name: 'Brice',
+    label: 'Alternative 2',
     attributes: [
-      { name: 'strength', value: 10 },
-      { name: 'intelligence', value: 25 },
-      { name: 'luck', value: 8 }
-    ]
-  },
-  {
-    name: 'Casey',
-    attributes: [
-      { name: 'strength', value: 15 },
-      { name: 'intelligence', value: 20 },
-      { name: 'luck', value: 15 }
+      { id: 'wq-fishery-2', x: 'wq fishery', y: 6.042483 },
+      { id: 'wq-city-2', x: 'wq city', y: 3.410843 },
+      { id: 'roi-2', x: 'roi', y: 6.887735 },
+      { id: 'city-tax-2', x: 'city tax', y: 8.989781 },
     ]
   },
 ]
 
-export {
-  coordinates, coordinateSets, filterData, optimizationData
-}
+export { coordinates, filterData, testdata }

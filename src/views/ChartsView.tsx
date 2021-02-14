@@ -7,7 +7,7 @@ import StackedBarChart from 'components/visualizations/bar/StackedBarChart'
 import ParallelAxes from 'components/visualizations/parallelAxes/ParallelAxes'
 import ScatterChart from 'components/visualizations/scatter/ScatterChart'
 import ScatterSelection from 'components/visualizations/scatter/ScatterSelection'
-import Table from 'components/visualizations/table/Table'
+import CoordinateTable from 'components/visualizations/table/CoordinateTable'
 
 import { useSelectedSet } from 'hooks/selectors'
 
@@ -49,7 +49,7 @@ const ChartsView: React.FC = () => {
       {createGrid(<ScatterChart />, <ScatterSelection />)}
 
       {createSubHeading('Basic table')}
-      {createGrid(<Table />)}
+      {createGrid(<CoordinateTable />)}
 
       {createSubHeading('Filtering')}
       {createGrid(<ParallelAxes />)}

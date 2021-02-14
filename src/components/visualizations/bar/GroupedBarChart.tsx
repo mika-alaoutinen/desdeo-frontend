@@ -2,22 +2,23 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { GroupedBarChartComponent } from 'desdeo-components'
 
-import { Coordinate } from 'data/dataTypes'
-import { selectSet } from 'store/sets/setActions'
-import { useCoordinateSets } from 'hooks/selectors'
+import { Coordinate } from 'misc/dataTypes'
+import { useDataset } from 'hooks/selectors'
+import { selectDatum } from 'store/dataset/datasetActions'
 
 const GroupedBarChart: React.FC = () => {
-  const data = useCoordinateSets()
+  const data = useDataset()
   const dispatch = useDispatch()
 
   const onClick = (clicked: Coordinate): void => {
-    dispatch(selectSet(clicked))
+    dispatch(selectDatum(clicked))
   }
 
   return (
     <GroupedBarChartComponent
-      datasets={data}
-      horizontal={true}
+      data={data}
+      grouping={'alternatives'}
+      orientation={'vertical'}
       onClick={onClick}
     />
   )

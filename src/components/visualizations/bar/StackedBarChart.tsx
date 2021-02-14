@@ -2,21 +2,23 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { StackedBarChartComponent } from 'desdeo-components'
 
-import { Coordinate } from 'data/dataTypes'
-import { useCoordinateSets } from 'hooks/selectors'
-import { selectSet } from 'store/sets/setActions'
+import { Coordinate } from 'misc/dataTypes'
+import { useDataset } from 'hooks/selectors'
+import { selectDatum } from 'store/dataset/datasetActions'
 
 const StackedBarChart: React.FC = () => {
-  const data = useCoordinateSets()
+  const data = useDataset()
   const dispatch = useDispatch()
 
   const onClick = (clicked: Coordinate): void => {
-    dispatch(selectSet(clicked))
+    dispatch(selectDatum(clicked))
   }
 
   return (
     <StackedBarChartComponent
-      datasets={data}
+      data={data}
+      grouping={'alternatives'}
+      orientation={'horizontal'}
       onClick={onClick}
     />
   )

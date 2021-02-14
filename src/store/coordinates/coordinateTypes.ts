@@ -1,4 +1,4 @@
-import { Coordinate } from 'data/dataTypes'
+import { Coordinate } from 'misc/dataTypes'
 
 // Action names
 export const ADD_DATA = 'ADD_DATA'
