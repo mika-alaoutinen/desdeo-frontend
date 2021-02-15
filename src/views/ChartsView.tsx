@@ -8,6 +8,7 @@ import ParallelAxes from 'components/visualizations/parallelAxes/ParallelAxes'
 import ScatterChart from 'components/visualizations/scatter/ScatterChart'
 import ScatterSelection from 'components/visualizations/scatter/ScatterSelection'
 import CoordinateTable from 'components/visualizations/table/CoordinateTable'
+import DataTable from 'components/visualizations/table/DataTable'
 
 import { useSelectedSet } from 'hooks/selectors'
 
@@ -50,6 +51,9 @@ const ChartsView: React.FC = () => {
 
       {createSubHeading('Basic table')}
       {createGrid(<CoordinateTable />)}
+
+      {createSubHeading('Data table')}
+      {createGrid(<DataTable />)}
 
       {createSubHeading('Filtering')}
       {createGrid(<ParallelAxes />)}
