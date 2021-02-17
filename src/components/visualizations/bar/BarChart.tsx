@@ -2,16 +2,16 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { BarChartComponent } from 'desdeo-components'
 
-import { Coordinate } from 'misc/dataTypes'
-import { useCoordinates } from 'hooks/selectors'
-import { selectCoordinate } from 'store/coordinates/coordinateActions'
+import { Value } from 'misc/dataTypes'
+import { useDataset } from 'hooks/selectors'
+import { selectDatum } from 'store/dataset/datasetActions'
 
 const BarChart: React.FC = () => {
-  const data = useCoordinates()
+  const data = useDataset()[0]
   const dispatch = useDispatch()
 
-  const onClick = (clicked: Coordinate): void => {
-    dispatch(selectCoordinate(clicked))
+  const onClick = (clicked: Value): void => {
+    dispatch(selectDatum(clicked))
   }
 
   return (

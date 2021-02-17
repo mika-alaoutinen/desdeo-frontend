@@ -13,7 +13,7 @@ import DataTable from 'components/visualizations/table/DataTable'
 import { useSelectedSet } from 'hooks/selectors'
 
 const ChartsView: React.FC = () => {
-  const { id, label, y } = useSelectedSet()
+  const { id, isSelected, value } = useSelectedSet()
 
   const createSubHeading = (text: string): JSX.Element =>
     <h3 style={{ textAlign: 'center' }}>
@@ -38,10 +38,10 @@ const ChartsView: React.FC = () => {
     <div className='ChartsView'>
       <h2>Charts page</h2>
 
-      <p>Selected coordinate:</p>
+      <p>Selected value:</p>
       <p>ID: {id}</p>
-      <p>Label: {label}</p>
-      <p>Y: {y}</p>
+      <p>is selected: {isSelected}</p>
+      <p>value: {value}</p>
 
       {createSubHeading('Bar charts')}
       {createGrid(<BarChart />, <GroupedBarChart />, <StackedBarChart />)}

@@ -1,13 +1,17 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { DataTableComponent } from 'desdeo-components'
 
 import { useDataset } from 'hooks/selectors'
+import { Value } from 'misc/dataTypes'
+import { selectDatum } from 'store/dataset/datasetActions'
 
 const DataTable: React.FC = () => {
   const data = useDataset()
+  const dispatch = useDispatch()
 
-  const onClick = (n: number): void => {
-    console.log('clicked', n)
+  const onClick = (value: Value): void => {
+    dispatch(selectDatum(value))
   }
 
   return (
