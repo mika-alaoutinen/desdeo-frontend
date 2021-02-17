@@ -1,4 +1,4 @@
-import { Coordinate, DataSet } from 'misc/dataTypes'
+import { DataSet, Value } from 'misc/dataTypes'
 
 // Action names
 export const ADD_DATASET = 'ADD_DATASET'
@@ -15,5 +15,5 @@ interface AddData {
 
 interface SelectDatum {
   type: typeof SELECT_DATUM,
-  datum: Coordinate
+  datum: Value
 }

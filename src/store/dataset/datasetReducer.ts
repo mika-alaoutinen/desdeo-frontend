@@ -1,4 +1,4 @@
-import { Coordinate, DataSet } from 'misc/dataTypes'
+import { DataSet, Value } from 'misc/dataTypes'
 import { ADD_DATASET, SELECT_DATUM, DatasetAction, DatasetState } from './datasetTypes'
 
 const dataset = (state: DatasetState = [], action: DatasetAction): DatasetState => {
@@ -16,7 +16,7 @@ const dataset = (state: DatasetState = [], action: DatasetAction): DatasetState 
   }
 }
 
-const selectSet = (clicked: Coordinate, state: DataSet): DatasetState => {
+const selectSet = (clicked: Value, state: DataSet): DatasetState => {
   console.log('clicked', clicked)
   return state
 }
