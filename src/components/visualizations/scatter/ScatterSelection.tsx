@@ -3,11 +3,11 @@ import { useDispatch } from 'react-redux'
 import { ScatterSelectionComponent } from 'desdeo-components'
 
 import { Coordinate } from 'misc/dataTypes'
-import { useDataSetTuple } from 'hooks/selectors'
+import { useCoordinates } from 'hooks/selectors'
 import { clearSelected, selectCoordinates } from 'store/coordinates/coordinateActions'
 
 const ScatterSelection: React.FC = () => {
-  const data = useDataSetTuple()
+  const data = useCoordinates()
   const dispatch = useDispatch()
 
   const onSelect = (selected: Coordinate[]): void => {
