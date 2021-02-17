@@ -1,4 +1,4 @@
-import { DataSet, Value } from 'misc/dataTypes'
+import { Value } from 'misc/dataTypes'
 import { ADD_DATASET, SELECT_DATUM, DatasetAction, DatasetState } from './datasetTypes'
 
 const dataset = (state: DatasetState = [], action: DatasetAction): DatasetState => {
@@ -7,18 +7,28 @@ const dataset = (state: DatasetState = [], action: DatasetAction): DatasetState 
     case ADD_DATASET:
       return state.concat(action.data)
 
-    // TODO: map selection?
     case SELECT_DATUM:
-      return selectSet(action.datum, state)
+      return state.map(column => {
+        const data = column.data.map(value => value.id === action.datum.id
+          ? editSelected(action.datum)
+          : value
+        )
+        return { ...column, data }
+      })
 
     default:
       return state
   }
 }
 
-const selectSet = (clicked: Value, state: DataSet): DatasetState => {
-  console.log('clicked', clicked)
-  return state
-}
+const editSelected = (value: Value): Value =>
+  value.isSelected === undefined
+    ? setSelected(value, true)
+    : setSelected(value, !value.isSelected)
+
+const setSelected = (value: Value, isSelected: boolean): Value => ({
+  ...value,
+  isSelected
+})
 
 export default dataset

@@ -2,11 +2,19 @@ import { DataSet } from 'misc/dataTypes'
 
 export const dataset: DataSet = [
   {
-    label: 'dataset 1',
-    data: [ 1, 2, 3 ]
+    label: 'Label A',
+    data: [
+      { id: 'a1', isSelected: false, value: 1 },
+      { id: 'a2', isSelected: false, value: 2 },
+      { id: 'a3', isSelected: false, value: 3 },
+    ]
   },
   {
-    label: 'dataset 2',
-    data: [ 4, 5, 6 ]
+    label: 'Label B',
+    data: [
+      { id: 'b1', isSelected: false, value: 4 },
+      { id: 'b2', isSelected: false, value: 5 },
+      { id: 'b3', isSelected: false, value: 6 },
+    ]
   },
 ]
