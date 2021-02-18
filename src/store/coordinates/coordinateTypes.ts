@@ -8,14 +8,10 @@ export const SELECT_COORDINATE = 'SELECT_COORDINATE'
 
 // Types for state and actions
 export type CoordinateState = Coordinate[]
-export type CoordinateAction =
-  | AddCoordinate
-  | ClearSelected
-  | SelectCoordinates
-  | SelectCoordinate
+export type CoordinateAction = AddCoordinate | ClearSelected | SelectCoordinates | SelectCoordinate
 
 interface AddCoordinate {
-  type: typeof ADD_COORDINATES,
+  type: typeof ADD_COORDINATES
   data: Coordinate[]
 }
 
@@ -24,11 +20,11 @@ interface ClearSelected {
 }
 
 interface SelectCoordinates {
-  type: typeof SELECT_COORDINATES,
+  type: typeof SELECT_COORDINATES
   data: Coordinate[]
 }
 
 interface SelectCoordinate {
-  type: typeof SELECT_COORDINATE,
+  type: typeof SELECT_COORDINATE
   datum: Coordinate
 }

@@ -22,7 +22,7 @@ const testdata: DataSet = [
       { id: 'wq-fishery-7', isSelected: false, value: 6.291364 },
       { id: 'wq-fishery-8', isSelected: false, value: 5.407513 },
       { id: 'wq-fishery-9', isSelected: false, value: 6.019503 },
-    ]
+    ],
   },
 
   {
@@ -38,7 +38,7 @@ const testdata: DataSet = [
       { id: 'wq-city-7', isSelected: false, value: 3.346416 },
       { id: 'wq-city-8', isSelected: false, value: 3.130143 },
       { id: 'wq-city-9', isSelected: false, value: 3.350959 },
-    ]
+    ],
   },
 
   {
@@ -54,7 +54,7 @@ const testdata: DataSet = [
       { id: 'roi', isSelected: false, value: 2.847139 },
       { id: 'roi', isSelected: false, value: 7.254194 },
       { id: 'roi', isSelected: false, value: 6.195485 },
-    ]
+    ],
   },
 
   {
@@ -70,7 +70,7 @@ const testdata: DataSet = [
       { id: 'city-tax', isSelected: false, value: 5.67065 },
       { id: 'city-tax', isSelected: false, value: 2.057297 },
       { id: 'city-tax', isSelected: false, value: 6.173211 },
-    ]
+    ],
   },
 
   {
@@ -86,8 +86,8 @@ const testdata: DataSet = [
       { id: 'plant-resources', isSelected: false, value: 0.328574 },
       { id: 'plant-resources', isSelected: false, value: 0.228541 },
       { id: 'plant-resources', isSelected: false, value: 0.327455 },
-    ]
-  }
+    ],
+  },
 ]
 
 const filterData: ParallelAxesData[] = [
@@ -98,7 +98,7 @@ const filterData: ParallelAxesData[] = [
       { id: 'wq-city-1', x: 'wq city', y: 3.17527 },
       { id: 'roi-1', x: 'roi', y: 6.090291 },
       { id: 'city-tax-1', x: 'city tax', y: 2.444406 },
-    ]
+    ],
   },
   {
     label: 'Alternative 2',
@@ -107,7 +107,7 @@ const filterData: ParallelAxesData[] = [
       { id: 'wq-city-2', x: 'wq city', y: 3.410843 },
       { id: 'roi-2', x: 'roi', y: 6.887735 },
       { id: 'city-tax-2', x: 'city tax', y: 8.989781 },
-    ]
+    ],
   },
 ]
 

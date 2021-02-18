@@ -1,10 +1,16 @@
 import {
-  ADD_COORDINATES, CLEAR_SELECTED, SELECT_COORDINATES, SELECT_COORDINATE
+  ADD_COORDINATES,
+  CLEAR_SELECTED,
+  SELECT_COORDINATES,
+  SELECT_COORDINATE,
 } from 'store/coordinates/coordinateTypes'
 import { createCoordinates, createCoordinate } from 'tests/store/coordinates/testUtils'
 
 import {
-  addCoordinates, clearSelected, selectCoordinate, selectCoordinates
+  addCoordinates,
+  clearSelected,
+  selectCoordinate,
+  selectCoordinates,
 } from 'store/coordinates/coordinateActions'
 
 describe('Should create actions', () => {
@@ -13,7 +19,7 @@ describe('Should create actions', () => {
     expect(addCoordinates(data)).toEqual({ type: ADD_COORDINATES, data })
   })
 
-  it ('should create an action to clear all selections', () => {
+  it('should create an action to clear all selections', () => {
     expect(clearSelected()).toEqual({ type: CLEAR_SELECTED })
   })
 

@@ -14,12 +14,7 @@ const CoordinateTable: React.FC = () => {
     dispatch(selectCoordinate(clicked))
   }
 
-  return (
-    <CoordinateTableComponent
-      data={data}
-      onClick={onClick}
-    />
-  )
+  return <CoordinateTableComponent data={data} onClick={onClick} />
 }
 
 export default CoordinateTable

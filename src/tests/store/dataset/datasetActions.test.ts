@@ -13,7 +13,7 @@ describe('Should create actions', () => {
     const datum: Value = {
       id: '1',
       isSelected: false,
-      value: 1
+      value: 1,
     }
     expect(selectDatum(datum)).toEqual({ type: SELECT_DATUM, datum })
   })

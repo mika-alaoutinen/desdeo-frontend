@@ -6,23 +6,23 @@ import ChartsView from 'views/ChartsView'
 import HomeView from 'views/HomeView'
 
 interface Link {
-  text: string,
+  text: string
   to: string
 }
 
 export const home: Link = {
   text: 'Home',
-  to: '/'
+  to: '/',
 }
 
 export const about: Link = {
   text: 'About',
-  to: '/about'
+  to: '/about',
 }
 
 export const charts: Link = {
   text: 'Charts',
-  to: '/charts'
+  to: '/charts',
 }
 
 const Routes: React.FC = () => (
@@ -31,6 +31,6 @@ const Routes: React.FC = () => (
     <Route exact path={charts.to} component={ChartsView} />
     <Route exact path={home.to} component={HomeView} />
   </Switch>
-  )
+)
 
 export default Routes

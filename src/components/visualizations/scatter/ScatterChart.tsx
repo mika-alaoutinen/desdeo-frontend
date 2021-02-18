@@ -14,12 +14,7 @@ const ScatterChart: React.FC = () => {
     dispatch(selectCoordinate(clicked))
   }
 
-  return (
-    <ScatterChartComponent
-      data={data}
-      onClick={onClick}
-    />
-  )
+  return <ScatterChartComponent data={data} onClick={onClick} />
 }
 
 export default ScatterChart

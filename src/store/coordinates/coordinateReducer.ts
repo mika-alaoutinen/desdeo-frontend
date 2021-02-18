@@ -1,12 +1,15 @@
 import { Coordinate } from 'misc/dataTypes'
 import {
-  ADD_COORDINATES, CLEAR_SELECTED, SELECT_COORDINATES, SELECT_COORDINATE,
-  CoordinateAction, CoordinateState
+  ADD_COORDINATES,
+  CLEAR_SELECTED,
+  SELECT_COORDINATES,
+  SELECT_COORDINATE,
+  CoordinateAction,
+  CoordinateState,
 } from './coordinateTypes'
 
 const coordinates = (state: CoordinateState = [], action: CoordinateAction): CoordinateState => {
   switch (action.type) {
-
     case ADD_COORDINATES:
       return state.concat(action.data)
 
@@ -21,9 +24,7 @@ const coordinates = (state: CoordinateState = [], action: CoordinateAction): Coo
 
     case SELECT_COORDINATE:
       return state.map(coordinate =>
-        coordinate.id === action.datum.id ?
-          editSelected(action.datum)
-          : coordinate
+        coordinate.id === action.datum.id ? editSelected(action.datum) : coordinate
       )
 
     default:
@@ -32,18 +33,14 @@ const coordinates = (state: CoordinateState = [], action: CoordinateAction): Coo
 }
 
 const editSelected = (datum: Coordinate): Coordinate =>
-  datum.isSelected === undefined
-    ? setSelected(datum, true)
-    : setSelected(datum, !datum.isSelected)
+  datum.isSelected === undefined ? setSelected(datum, true) : setSelected(datum, !datum.isSelected)
 
 const mapSelected = (selectedIDs: string[], datum: Coordinate): Coordinate =>
-  selectedIDs.includes(datum.id)
-    ? setSelected(datum, true)
-    : datum
+  selectedIDs.includes(datum.id) ? setSelected(datum, true) : datum
 
 const setSelected = (datum: Coordinate, isSelected: boolean): Coordinate => ({
   ...datum,
-  isSelected
+  isSelected,
 })
 
 export default coordinates

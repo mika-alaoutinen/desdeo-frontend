@@ -7,17 +7,11 @@ import { home } from 'router/Routes'
 const style: React.CSSProperties = {
   color: 'inherit',
   flex: 1,
-  textDecoration: 'none'
+  textDecoration: 'none',
 }
 
 const NavigationHeader: React.FC = () => (
-  <Typography
-    className='desdeo-heading'
-    component={Link}
-    style={style}
-    to={home.to}
-    variant='h4'
-  >
+  <Typography className='desdeo-heading' component={Link} style={style} to={home.to} variant='h4'>
     DESDEO
   </Typography>
 )

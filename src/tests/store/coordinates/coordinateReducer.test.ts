@@ -1,5 +1,8 @@
 import {
-  addCoordinates, clearSelected, selectCoordinate, selectCoordinates
+  addCoordinates,
+  clearSelected,
+  selectCoordinate,
+  selectCoordinates,
 } from 'store/coordinates/coordinateActions'
 import { createCoordinates } from 'tests/store/coordinates/testUtils'
 

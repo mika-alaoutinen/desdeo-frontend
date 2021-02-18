@@ -11,9 +11,6 @@ export const reducer = combineReducers({
   selectedDataset,
 })
 
-export const store = createStore(
-  reducer,
-  composeWithDevTools()
-)
+export const store = createStore(reducer, composeWithDevTools())
 
 export default store
