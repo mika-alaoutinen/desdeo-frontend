@@ -1,2 +1,4 @@
+.github
 build
+coverage
 node_modules
