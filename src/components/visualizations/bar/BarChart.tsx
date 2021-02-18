@@ -14,12 +14,7 @@ const BarChart: React.FC = () => {
     dispatch(selectDatum(clicked))
   }
 
-  return (
-    <BarChartComponent
-      data={data}
-      onClick={onClick}
-    />
-  )
+  return <BarChartComponent data={data} onClick={onClick} />
 }
 
 export default BarChart

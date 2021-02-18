@@ -5,29 +5,21 @@ import { AppBar, Button, Toolbar } from '@material-ui/core'
 import NavigationHeader from './NavigationHeader'
 import { about, charts } from 'router/Routes'
 
-const links = [ about, charts ]
+const links = [about, charts]
 
 const Navigation: React.FC = () => {
-
   const createNavButtons = (): JSX.Element[] =>
-    links.map(({ text, to }) =>
-      <Button
-        key={text}
-        color='inherit'
-        component={Link}
-        to={to}
-      >
+    links.map(({ text, to }) => (
+      <Button key={text} color='inherit' component={Link} to={to}>
         {text}
       </Button>
-    )
+    ))
 
   return (
     <AppBar position='static'>
       <Toolbar>
         <NavigationHeader />
-        <nav>
-          {createNavButtons()}
-        </nav>
+        <nav>{createNavButtons()}</nav>
       </Toolbar>
     </AppBar>
   )

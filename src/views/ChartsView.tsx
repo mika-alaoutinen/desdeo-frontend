@@ -15,24 +15,21 @@ import { useSelectedSet } from 'hooks/selectors'
 const ChartsView: React.FC = () => {
   const { id, isSelected, value } = useSelectedSet()
 
-  const createSubHeading = (text: string): JSX.Element =>
-    <h3 style={{ textAlign: 'center' }}>
-      {text}
-    </h3>
+  const createSubHeading = (text: string): JSX.Element => (
+    <h3 style={{ textAlign: 'center' }}>{text}</h3>
+  )
 
-  const createGrid = (...components: JSX.Element[]): JSX.Element =>
-    <Grid
-      className='chart-grid'
-      container
-      justify='center'
-    >
+  const createGrid = (...components: JSX.Element[]): JSX.Element => (
+    <Grid className='chart-grid' container justify='center'>
       {components.map((component, index) => wrapComponentInGrid(component, index))}
     </Grid>
+  )
 
-  const wrapComponentInGrid = (component: JSX.Element, key: number): JSX.Element =>
+  const wrapComponentInGrid = (component: JSX.Element, key: number): JSX.Element => (
     <Grid key={key} item>
       {component}
     </Grid>
+  )
 
   return (
     <div className='ChartsView'>

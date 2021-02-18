@@ -9,11 +9,11 @@ export type DatasetState = DataSet
 export type DatasetAction = AddData | SelectDatum
 
 interface AddData {
-  type: typeof ADD_DATASET,
+  type: typeof ADD_DATASET
   data: DataSet
 }
 
 interface SelectDatum {
-  type: typeof SELECT_DATUM,
+  type: typeof SELECT_DATUM
   datum: Value
 }

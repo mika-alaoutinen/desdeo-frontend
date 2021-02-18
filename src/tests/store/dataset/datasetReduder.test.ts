@@ -9,10 +9,8 @@ describe('Add dataset action concatenates new dataset to existing state', () => 
     const newDataset: DataSet = [
       {
         label: 'new dataset',
-        data: [
-          { id: '10', isSelected: false, value: 10 }
-        ]
-      }
+        data: [{ id: '10', isSelected: false, value: 10 }],
+      },
     ]
 
     const action = addDataset(newDataset)
@@ -26,7 +24,7 @@ describe('Select datum action does nothing for now', () => {
     const value: Value = {
       id: 'a1',
       isSelected: false,
-      value: 1
+      value: 1,
     }
 
     const expectedState: DataSet = [
@@ -36,7 +34,7 @@ describe('Select datum action does nothing for now', () => {
           { id: 'a1', isSelected: true, value: 1 },
           { id: 'a2', isSelected: false, value: 2 },
           { id: 'a3', isSelected: false, value: 3 },
-        ]
+        ],
       },
       {
         label: 'Label B',
@@ -44,7 +42,7 @@ describe('Select datum action does nothing for now', () => {
           { id: 'b1', isSelected: false, value: 4 },
           { id: 'b2', isSelected: false, value: 5 },
           { id: 'b3', isSelected: false, value: 6 },
-        ]
+        ],
       },
     ]
 

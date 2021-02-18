@@ -14,12 +14,7 @@ const DataTable: React.FC = () => {
     dispatch(selectDatum(value))
   }
 
-  return (
-    <DataTableComponent
-      data={data}
-      onClick={onClick}
-    />
-  )
+  return <DataTableComponent data={data} onClick={onClick} />
 }
 
 export default DataTable
