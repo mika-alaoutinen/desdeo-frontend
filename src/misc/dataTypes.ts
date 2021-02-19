@@ -6,4 +6,11 @@ import {
   Value,
 } from 'desdeo-components/build/types/dataTypes'
 
-export type { Coordinate, CoordinateSet, DataSet, ParallelAxesData, Value }
+type InputDataSet = InputData[]
+
+interface InputData {
+  label: string
+  data: number[]
+}
+
+export type { Coordinate, CoordinateSet, DataSet, InputDataSet, ParallelAxesData, Value }
