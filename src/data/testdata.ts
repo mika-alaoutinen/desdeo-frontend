@@ -8,7 +8,7 @@ const coordinates: Coordinate[] = [
   { id: 'e', x: 50, y: 50, label: 'E' },
 ]
 
-const testdata: DataSet = [
+const dataset: DataSet = [
   {
     label: 'WQ Fishery',
     data: [
@@ -111,4 +111,4 @@ const filterData: ParallelAxesData[] = [
   },
 ]
 
-export { coordinates, filterData, testdata }
+export { coordinates, filterData, dataset }

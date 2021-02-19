@@ -6,7 +6,7 @@ import Navigation from 'components/navigation/Navigation'
 import Routes from 'router/Routes'
 import { addCoordinates } from 'store/coordinates/coordinateActions'
 import { addDataset } from 'store/dataset/datasetActions'
-import { coordinates, testdata } from 'tests/testdata'
+import { coordinates, dataset } from 'data/testdata'
 
 const style: React.CSSProperties = {
   fontFamily: 'Roboto',
@@ -17,7 +17,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     dispatch(addCoordinates(coordinates))
-    dispatch(addDataset(testdata))
+    dispatch(addDataset(dataset))
   }, [dispatch])
 
   return (
