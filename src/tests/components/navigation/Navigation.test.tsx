@@ -16,8 +16,8 @@ describe('Navigation component is rendered', () => {
 })
 
 describe('Navigation elements are displayed', () => {
-  it('About and Charts buttons are displayed', () => {
-    const buttonTexts = ['About', 'Charts']
+  it('About, Bar, Parallel Coordinates, Scatter and Tables buttons are displayed', () => {
+    const buttonTexts = ['About', 'Bar', 'Parallel Coordinates', 'Scatter', 'Tables']
     buttonTexts
       .map(text => screen.getByText(text))
       .forEach(htmlElement => expect(htmlElement).toBeTruthy())
@@ -31,7 +31,7 @@ describe('Navigation elements are displayed', () => {
 
 describe('Navigation elements have links that point to correct hrefs', () => {
   it('About and Charts buttons have links', () => {
-    const expectedLinks = ['/about', '/charts']
+    const expectedLinks = ['/about', '/bar', '/parallel-coordinates', '/scatter', '/tables']
     Array.from(container.querySelectorAll('nav > a'))
       .map(link => link.getAttribute('href'))
       .forEach(href => expect(expectedLinks).toContain(href))
