@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom'
 import { AppBar, Button, Toolbar } from '@material-ui/core'
 
 import NavigationHeader from './NavigationHeader'
-import { about, charts } from 'router/Routes'
+import { links } from 'router/Routes'
 
-const links = [about, charts]
+// Don't create nav button for home
+const [, ...navLinks] = links
 
 const Navigation: React.FC = () => {
   const createNavButtons = (): JSX.Element[] =>
-    links.map(({ text, to }) => (
+    navLinks.map(({ text, to }) => (
       <Button key={text} color='inherit' component={Link} to={to}>
         {text}
       </Button>

@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Typography } from '@material-ui/core'
 
-import { home } from 'router/Routes'
+import { links } from 'router/Routes'
+
+const [home] = links
 
 const style: React.CSSProperties = {
   color: 'inherit',
@@ -11,7 +13,7 @@ const style: React.CSSProperties = {
 }
 
 const NavigationHeader: React.FC = () => (
-  <Typography className='desdeo-heading' component={Link} style={style} to={home.to} variant='h4'>
+  <Typography className='heading' component={Link} style={style} to={home.to} variant='h4'>
     DESDEO
   </Typography>
 )
