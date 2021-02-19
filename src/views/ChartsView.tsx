@@ -1,5 +1,4 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
 
 import BarChart from 'components/visualizations/bar/BarChart'
 import GroupedBarChart from 'components/visualizations/bar/GroupedBarChart'
@@ -11,24 +10,13 @@ import CoordinateTable from 'components/visualizations/table/CoordinateTable'
 import DataTable from 'components/visualizations/table/DataTable'
 
 import { useSelectedSet } from 'hooks/selectors'
+import { createGrid } from 'views/viewUtils'
 
 const ChartsView: React.FC = () => {
   const { id, isSelected, value } = useSelectedSet()
 
   const createSubHeading = (text: string): JSX.Element => (
     <h3 style={{ textAlign: 'center' }}>{text}</h3>
-  )
-
-  const createGrid = (...components: JSX.Element[]): JSX.Element => (
-    <Grid className='chart-grid' container justify='center'>
-      {components.map((component, index) => wrapComponentInGrid(component, index))}
-    </Grid>
-  )
-
-  const wrapComponentInGrid = (component: JSX.Element, key: number): JSX.Element => (
-    <Grid key={key} item>
-      {component}
-    </Grid>
   )
 
   return (
