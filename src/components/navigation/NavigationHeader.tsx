@@ -13,7 +13,7 @@ const style: React.CSSProperties = {
 }
 
 const NavigationHeader: React.FC = () => (
-  <Typography className='heading' component={Link} style={style} to={home.to} variant='h4'>
+  <Typography className='desdeo-heading' component={Link} style={style} to={home.to} variant='h4'>
     DESDEO
   </Typography>
 )
