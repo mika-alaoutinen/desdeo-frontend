@@ -26,8 +26,8 @@ export const links: Link[] = [
   home,
   about,
   barCharts,
-  radarCharts,
   parallelCoordinates,
+  radarCharts,
   scatterCharts,
   tables,
 ]
