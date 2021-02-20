@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { BarChartComponent } from 'desdeo-components'
+import { Bar } from 'desdeo-components'
 
 import { Value } from 'misc/dataTypes'
 import { useDataset } from 'hooks/selectors'
@@ -14,7 +14,7 @@ const BarChart: React.FC = () => {
     dispatch(selectDatum(clicked))
   }
 
-  return <BarChartComponent data={data} onClick={onClick} />
+  return <Bar data={data} onClick={onClick} />
 }
 
 export default BarChart

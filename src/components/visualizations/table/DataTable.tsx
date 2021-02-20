@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { DataTableComponent } from 'desdeo-components'
+import { DataTable as DataTableComponent } from 'desdeo-components'
 
 import { useDataset } from 'hooks/selectors'
 import { Value } from 'misc/dataTypes'

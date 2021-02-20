@@ -1,8 +1,8 @@
 import {
+  AttributeSet,
   Coordinate,
   CoordinateSet,
   DataSet,
-  ParallelAxesData,
   Value,
 } from 'desdeo-components/build/types/dataTypes'
 
@@ -13,4 +13,4 @@ interface InputData {
   data: number[]
 }
 
-export type { Coordinate, CoordinateSet, DataSet, InputDataSet, ParallelAxesData, Value }
+export type { AttributeSet, Coordinate, CoordinateSet, DataSet, InputDataSet, Value }

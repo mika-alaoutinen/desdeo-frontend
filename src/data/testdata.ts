@@ -1,4 +1,4 @@
-import { Coordinate, DataSet, InputDataSet, ParallelAxesData } from 'misc/dataTypes'
+import { AttributeSet, Coordinate, DataSet, InputDataSet } from 'misc/dataTypes'
 
 const coordinates: Coordinate[] = [
   { id: 'a', x: 10, y: 20, label: 'A', isSelected: true },
@@ -8,7 +8,7 @@ const coordinates: Coordinate[] = [
   { id: 'e', x: 50, y: 50, label: 'E' },
 ]
 
-const dataset: DataSet = [
+const dataset: DataSet[] = [
   {
     label: 'WQ Fishery',
     data: [
@@ -90,7 +90,7 @@ const dataset: DataSet = [
   },
 ]
 
-const filterData: ParallelAxesData[] = [
+const filterData: AttributeSet[] = [
   {
     label: 'Alternative 1',
     attributes: [

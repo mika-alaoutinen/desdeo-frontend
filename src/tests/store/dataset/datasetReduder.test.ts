@@ -6,7 +6,7 @@ import reducer from 'store/dataset/datasetReducer'
 
 describe('Add dataset action concatenates new dataset to existing state', () => {
   it('new dataset is added', () => {
-    const newDataset: DataSet = [
+    const newDataset: DataSet[] = [
       {
         label: 'new dataset',
         data: [{ id: '10', isSelected: false, value: 10 }],
@@ -27,7 +27,7 @@ describe('Select datum action does nothing for now', () => {
       value: 1,
     }
 
-    const expectedState: DataSet = [
+    const expectedState: DataSet[] = [
       {
         label: 'Label A',
         data: [

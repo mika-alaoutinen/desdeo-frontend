@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { GroupedBarChartComponent } from 'desdeo-components'
+import { GroupedBar } from 'desdeo-components'
 
 import { Value } from 'misc/dataTypes'
 import { useDataset } from 'hooks/selectors'
@@ -15,12 +15,7 @@ const GroupedBarChart: React.FC = () => {
   }
 
   return (
-    <GroupedBarChartComponent
-      data={data}
-      grouping={'alternatives'}
-      orientation={'vertical'}
-      onClick={onClick}
-    />
+    <GroupedBar data={data} grouping={'alternatives'} orientation={'vertical'} onClick={onClick} />
   )
 }
 

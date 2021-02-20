@@ -8,7 +8,7 @@ describe('createDataSet maps input into a DataSet with labels and Values', () =>
   ]
 
   it('maps data as expected', () => {
-    const expected: DataSet = [
+    const expected: DataSet[] = [
       {
         label: 'Set A',
         data: [
