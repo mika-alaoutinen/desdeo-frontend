@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { StackedBarChartComponent } from 'desdeo-components'
+import { StackedBar } from 'desdeo-components'
 
 import { Value } from 'misc/dataTypes'
 import { useDataset } from 'hooks/selectors'
@@ -15,7 +15,7 @@ const StackedBarChart: React.FC = () => {
   }
 
   return (
-    <StackedBarChartComponent
+    <StackedBar
       data={data}
       grouping={'alternatives'}
       orientation={'horizontal'}

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { ScatterChartComponent } from 'desdeo-components'
+import { Scatter } from 'desdeo-components'
 
 import { useCoordinates } from 'hooks/selectors'
 import { Coordinate } from 'misc/dataTypes'
@@ -14,7 +14,7 @@ const ScatterChart: React.FC = () => {
     dispatch(selectCoordinate(clicked))
   }
 
-  return <ScatterChartComponent data={data} onClick={onClick} />
+  return <Scatter data={data} onClick={onClick} />
 }
 
 export default ScatterChart

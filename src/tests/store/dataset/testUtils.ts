@@ -1,6 +1,6 @@
 import { DataSet } from 'misc/dataTypes'
 
-export const dataset: DataSet = [
+export const dataset: DataSet[] = [
   {
     label: 'Label A',
     data: [

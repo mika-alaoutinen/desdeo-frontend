@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { ScatterSelectionComponent } from 'desdeo-components'
+import { ScatterSelection as ScatterSelectionComponent } from 'desdeo-components'
 
 import { Coordinate } from 'misc/dataTypes'
 import { useCoordinates } from 'hooks/selectors'
