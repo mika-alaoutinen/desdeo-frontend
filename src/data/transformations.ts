@@ -1,4 +1,4 @@
-import { DataSet, InputDataSet, Value } from 'misc/dataTypes'
+import { DataSet, InputDataSet, Value } from 'data/dataTypes'
 
 export const createDataSet = (input: InputDataSet): DataSet[] =>
   input.map(({ data, label }) => ({

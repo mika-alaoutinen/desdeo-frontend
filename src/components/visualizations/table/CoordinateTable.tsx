@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { CoordinateTable as CoordinateTableComponent } from 'desdeo-components'
 
-import { Coordinate } from 'misc/dataTypes'
+import { Coordinate } from 'data/dataTypes'
 import { useCoordinates } from 'hooks/selectors'
 import { selectCoordinate } from 'store/coordinates/coordinateActions'
 

@@ -1,4 +1,4 @@
-import { DataSet } from 'misc/dataTypes'
+import { DataSet } from 'data/dataTypes'
 
 export const dataset: DataSet[] = [
   {

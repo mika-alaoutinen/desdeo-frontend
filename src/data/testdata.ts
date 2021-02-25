@@ -1,4 +1,4 @@
-import { AttributeSet, Coordinate, DataSet, InputDataSet } from 'misc/dataTypes'
+import { AttributeSet, Coordinate, DataSet, InputDataSet } from 'data/dataTypes'
 
 const coordinates: Coordinate[] = [
   { id: 'a', x: 10, y: 20, label: 'A', isSelected: true },

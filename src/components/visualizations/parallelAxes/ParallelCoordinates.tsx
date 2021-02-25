@@ -2,7 +2,7 @@ import React from 'react'
 import { ParallelAxes } from 'desdeo-components'
 
 import { useDataset } from 'hooks/selectors'
-import { Attribute, AttributeSet } from 'misc/dataTypes'
+import { Attribute, AttributeSet } from 'data/dataTypes'
 
 const ParallelCoordinates: React.FC = () => {
   const data = useDataset()

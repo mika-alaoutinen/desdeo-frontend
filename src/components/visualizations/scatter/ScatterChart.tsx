@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { Scatter } from 'desdeo-components'
 
 import { useCoordinates } from 'hooks/selectors'
-import { Coordinate } from 'misc/dataTypes'
+import { Coordinate } from 'data/dataTypes'
 import { selectCoordinate } from 'store/coordinates/coordinateActions'
 
 const ScatterChart: React.FC = () => {

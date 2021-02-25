@@ -1,4 +1,4 @@
-import { DataSet, Value } from 'misc/dataTypes'
+import { DataSet, Value } from 'data/dataTypes'
 
 // Action names
 export const ADD_DATASET = 'ADD_DATASET'

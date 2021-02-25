@@ -1,4 +1,4 @@
-import { Value } from 'misc/dataTypes'
+import { Value } from 'data/dataTypes'
 import { ADD_DATASET, SELECT_DATUM, DatasetAction, DatasetState } from './datasetTypes'
 
 const dataset = (state: DatasetState = [], action: DatasetAction): DatasetState => {

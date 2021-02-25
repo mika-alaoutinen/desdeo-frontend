@@ -2,7 +2,7 @@ import { ADD_DATASET, SELECT_DATUM } from 'store/dataset/datasetTypes'
 import { dataset } from 'tests/store/dataset/testUtils'
 
 import { addDataset, selectDatum } from 'store/dataset/datasetActions'
-import { Value } from 'misc/dataTypes'
+import { Value } from 'data/dataTypes'
 
 describe('Should create actions', () => {
   it('should create an action to add a new dataset', () => {
