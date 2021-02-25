@@ -4,9 +4,9 @@ import { AttributeSet, DataSet, InputDataSet, Value } from 'data/dataTypes'
 export const mapAttributeSetsToValues = (attributeSets: AttributeSet[]): Value[] =>
   attributeSets
     .flatMap(sets => sets.attributes)
-    .map(({ id, y }) => ({
+    .map(({ id, isSelected, y }) => ({
       id,
-      isSelected: true,
+      isSelected: !!isSelected,
       value: y,
     }))
 
