@@ -1,5 +1,6 @@
 import { AttributeSet, DataSet, InputDataSet, Value } from 'data/dataTypes'
 
+// update isSelected
 export const mapAttributeSetsToValues = (attributeSets: AttributeSet[]): Value[] =>
   attributeSets
     .flatMap(sets => sets.attributes)
