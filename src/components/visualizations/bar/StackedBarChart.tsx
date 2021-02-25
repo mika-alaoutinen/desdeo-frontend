@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { StackedBar } from 'desdeo-components'
 
-import { Value } from 'misc/dataTypes'
+import { Value } from 'data/dataTypes'
 import { useDataset } from 'hooks/selectors'
 import { selectDatum } from 'store/dataset/datasetActions'
 

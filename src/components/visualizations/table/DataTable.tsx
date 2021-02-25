@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { DataTable as DataTableComponent } from 'desdeo-components'
 
 import { useDataset } from 'hooks/selectors'
-import { Value } from 'misc/dataTypes'
+import { Value } from 'data/dataTypes'
 import { selectDatum } from 'store/dataset/datasetActions'
 
 const DataTable: React.FC = () => {

@@ -1,4 +1,5 @@
 import {
+  Attribute,
   AttributeSet,
   Coordinate,
   CoordinateSet,
@@ -13,4 +14,4 @@ interface InputData {
   data: number[]
 }
 
-export type { AttributeSet, Coordinate, CoordinateSet, DataSet, InputDataSet, Value }
+export type { Attribute, AttributeSet, Coordinate, CoordinateSet, DataSet, InputDataSet, Value }

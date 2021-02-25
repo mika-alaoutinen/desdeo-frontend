@@ -1,10 +1,21 @@
-import { Value } from 'misc/dataTypes'
-import { ADD_DATASET, SELECT_DATUM, DatasetAction, DatasetState } from './datasetTypes'
+import { Value } from 'data/dataTypes'
+import { ADD_DATASET, SELECT_DATA, SELECT_DATUM, DatasetAction, DatasetState } from './datasetTypes'
 
 const dataset = (state: DatasetState = [], action: DatasetAction): DatasetState => {
   switch (action.type) {
     case ADD_DATASET:
       return state.concat(action.data)
+
+    case SELECT_DATA:
+      return state.map(column => {
+        const selectedIDs = action.data.map(selected => selected.id)
+        return {
+          ...column,
+          data: column.data.map(value =>
+            selectedIDs.includes(value.id) ? setSelected(value, !value.isSelected) : value
+          ),
+        }
+      })
 
     case SELECT_DATUM:
       return state.map(column => {

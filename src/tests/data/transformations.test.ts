@@ -1,5 +1,5 @@
 import { createDataSet } from 'data/transformations'
-import { DataSet, InputDataSet } from 'misc/dataTypes'
+import { DataSet, InputDataSet } from 'data/dataTypes'
 
 describe('createDataSet maps input into a DataSet with labels and Values', () => {
   const input: InputDataSet = [

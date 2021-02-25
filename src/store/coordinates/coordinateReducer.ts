@@ -1,4 +1,4 @@
-import { Coordinate } from 'misc/dataTypes'
+import { Coordinate } from 'data/dataTypes'
 import {
   ADD_COORDINATES,
   CLEAR_SELECTED,

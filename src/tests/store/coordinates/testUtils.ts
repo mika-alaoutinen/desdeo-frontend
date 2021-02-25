@@ -1,4 +1,4 @@
-import { Coordinate } from 'misc/dataTypes'
+import { Coordinate } from 'data/dataTypes'
 
 const createCoordinates = (isSelected?: boolean): Coordinate[] => [
   {

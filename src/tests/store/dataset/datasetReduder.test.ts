@@ -1,4 +1,4 @@
-import { DataSet, Value } from 'misc/dataTypes'
+import { DataSet, Value } from 'data/dataTypes'
 import { addDataset, selectDatum } from 'store/dataset/datasetActions'
 import { dataset } from 'tests/store/dataset/testUtils'
 
