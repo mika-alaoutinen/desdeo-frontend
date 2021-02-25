@@ -2,11 +2,20 @@ import React from 'react'
 import { ParallelAxes } from 'desdeo-components'
 
 import { useDataset } from 'hooks/selectors'
+import { Attribute, AttributeSet } from 'misc/dataTypes'
 
 const ParallelCoordinates: React.FC = () => {
   const data = useDataset()
 
-  return <ParallelAxes data={data} />
+  const onChangeHandler = (active: AttributeSet[]): void => {
+    console.log('active', active)
+  }
+
+  const onLineClickHandler = (alternatives: Attribute[]): void => {
+    console.log('alternative', alternatives)
+  }
+
+  return <ParallelAxes data={data} onChange={onChangeHandler} onLineClick={onLineClickHandler} />
 }
 
 export default ParallelCoordinates
