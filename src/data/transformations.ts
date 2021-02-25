@@ -1,4 +1,13 @@
-import { DataSet, InputDataSet, Value } from 'data/dataTypes'
+import { AttributeSet, DataSet, InputDataSet, Value } from 'data/dataTypes'
+
+export const mapAttributeSetsToValues = (attributeSets: AttributeSet[]): Value[] =>
+  attributeSets
+    .flatMap(sets => sets.attributes)
+    .map(({ id, y }) => ({
+      id,
+      isSelected: true,
+      value: y,
+    }))
 
 export const createDataSet = (input: InputDataSet): DataSet[] =>
   input.map(({ data, label }) => ({
